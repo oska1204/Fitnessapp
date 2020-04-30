@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <h1>Fitnessapp</h1>
+        <nav>
+            <ul>
+                <li><a href="#">Træningsprogram</a></li>
+                <li><a href="#">Videoer</a></li>
+                <li><a href="#">Brugere</a></li>
+                <li><a style="cursor: pointer;" onclick="toggleTheme()">Lys/Mørk Tema</a></li>
+            </ul>
+        </nav>
+    </header>
+    <script>
+        if (localStorage.getItem('darkTheme') === 'true') document.body.classList.add('dark-theme')
+        function toggleTheme() {
+            const darkTheme = document.body.classList.toggle('dark-theme')
+            localStorage.setItem('darkTheme', darkTheme)
+        }
+    </script>
+</body>
+
+</html>
