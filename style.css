@@ -15,12 +15,13 @@ body {
     --main-bg-color: #eee;
     --secondary-color: #222;
     --secondary-bg-color: #ddd;
-    --spacing-s: .5rem 0 0 .5rem;
-    --spacing-m: 1rem 0 0 1rem;
-    --spacing-l: 1.5rem 0 0 1.5rem;
+    --spacing-s: .25rem;
+    --spacing-m: .5rem;
+    --spacing-l: .75rem;
+    --spacing-xl: 1rem;
 }
 
-body.dark-theme {
+html.dark-theme {
     --main-color: #ccc;
     --main-bg-color: #111;
     --secondary-color: #ddd;
@@ -37,7 +38,7 @@ header {
     justify-content: space-between;
     align-items: center;
     border: 2px solid;
-    padding: 0 1rem 1rem 0;
+    padding: var(--spacing-m);
 }
 
 header h1 {
@@ -64,11 +65,14 @@ nav li {
 }
 
 nav a {
-    padding: .75rem 1rem;
-    border: 1px solid;
+    padding: var(--spacing-l);
+    border: 2px solid;
     border-radius: .5rem;
     text-decoration: none;
     color: var(--secondary-color);
     background-color: var(--secondary-bg-color);
     word-wrap: break-word;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 80%;
 }
