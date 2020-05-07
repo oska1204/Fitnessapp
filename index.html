@@ -16,16 +16,20 @@
                 <li><a href="#">Træningsprogram</a></li>
                 <li><a href="#">Videoer</a></li>
                 <li><a href="#">Brugere</a></li>
-                <li><a style="cursor: pointer;" onclick="toggleTheme()">☀</a></li>
+                <li><a class="btn-toggle-theme">☀</a></li>
             </ul>
         </nav>
     </header>
     <script>
-        if (localStorage.getItem('darkTheme') === 'true') document.documentElement.classList.add('dark-theme')
-        function toggleTheme() {
-            const darkTheme = document.documentElement.classList.toggle('dark-theme')
-            localStorage.setItem('darkTheme', darkTheme)
-        }
+        window.addEventListener('DOMContentLoaded', function(event) {
+            if (localStorage.getItem('darkTheme') === 'true') document.documentElement.classList.add('dark-theme')
+            function toggleTheme() {
+                const darkTheme = document.documentElement.classList.toggle('dark-theme')
+                localStorage.setItem('darkTheme', darkTheme)
+            }
+            const btnToggleTheme = document.querySelector('.btn-toggle-theme')
+            btnToggleTheme.addEventListener('click', toggleTheme)
+        })
     </script>
 </body>
 
