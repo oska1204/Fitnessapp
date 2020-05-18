@@ -10,7 +10,7 @@
 
 <body>
     <header>
-        <h1>Fitnessapp</h1>
+        <h2>Fitnessapp</h2>
         <nav>
             <ul>
                 <li><a href="#">Træningsprogram</a></li>
@@ -20,6 +20,31 @@
             </ul>
         </nav>
     </header>
+    <div class="wrapper">
+        <main>
+            <h1>Træningsprogram</h1>
+            <p>Tryk på en plan for at ændre den eller <a href="#">opret en ny plan</a></p>
+            <article>
+                <h3>Ben program</h3>
+                <p>Consequuntur maiores et dicta neque. Deserunt ab dolor odio. Sunt sit enim numquam nostrum aperiam corrupti et officia.</p>
+                <p>Nesciunt at quia deserunt. Illo corrupti repellendus iste. Minima quo tenetur qui. Ut quos omnis laborum ut porro. Voluptatem.</p>
+            </article>
+            <article>
+                <h3>Overkrop øvelser program</h3>
+                <iframe width="640" height="360" src="https://www.youtube.com/embed/-FlxM_0S2lA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <p>Consequuntur maiores et dicta neque. Deserunt ab dolor odio. Sunt sit enim numquam nostrum aperiam corrupti et officia.</p>
+                <p>Nesciunt at quia deserunt. Illo corrupti repellendus iste. Minima quo tenetur qui. Ut quos omnis laborum ut porro. Voluptatem.</p>
+            </article>
+        </main>
+    </div>
+    <div class="login-modal">
+        <div class="login">
+            <h1>Log ind</h1>
+            <input type="text" placeholder="Email">
+            <input type="password" placeholder="Password">
+            <button>Log mig ind</button>
+        </div>
+    </div>
     <script>
         window.addEventListener('DOMContentLoaded', function(event) {
             if (localStorage.getItem('darkTheme') === 'true') document.documentElement.classList.add('dark-theme')
