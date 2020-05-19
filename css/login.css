@@ -1,0 +1,40 @@
+.login-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(--main-bg-color);
+    display: flex;
+}
+
+.login {
+    margin: auto;
+    padding: var(--spacing-xl);
+    border: 2px solid;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.login h1 {
+    margin: var(--spacing-m);
+}
+
+.login input, .login button {
+    background-color: var(--secondary-bg-color);
+    color: var(--secondary-color);
+    border: 2px solid;
+}
+
+.login input {
+    padding: var(--spacing-s);
+    margin: var(--spacing-m);
+}
+
+.login button {
+    align-self: flex-end;
+    padding: var(--spacing-s) var(--spacing-m);
+    margin: var(--spacing-m);
+    cursor: pointer;
+}

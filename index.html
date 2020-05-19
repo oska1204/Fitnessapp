@@ -4,58 +4,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Fitnessapp</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script type="module" src="js/app.js"></script>
 </head>
 
 <body>
-    <header>
-        <h2>Fitnessapp</h2>
-        <nav>
-            <ul>
-                <li><a href="#">Træningsprogram</a></li>
-                <li><a href="#">Videoer</a></li>
-                <li><a href="#">Brugere</a></li>
-                <li><a class="btn-toggle-theme">☀</a></li>
-            </ul>
-        </nav>
-    </header>
+    <header-fitnessapp></header-fitnessapp>
     <div class="wrapper">
         <main>
-            <h1>Træningsprogram</h1>
-            <p>Tryk på en plan for at ændre den eller <a href="#">opret en ny plan</a></p>
-            <article>
-                <h3>Ben program</h3>
-                <p>Consequuntur maiores et dicta neque. Deserunt ab dolor odio. Sunt sit enim numquam nostrum aperiam corrupti et officia.</p>
-                <p>Nesciunt at quia deserunt. Illo corrupti repellendus iste. Minima quo tenetur qui. Ut quos omnis laborum ut porro. Voluptatem.</p>
-            </article>
-            <article>
-                <h3>Overkrop øvelser program</h3>
-                <iframe width="640" height="360" src="https://www.youtube.com/embed/-FlxM_0S2lA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                <p>Consequuntur maiores et dicta neque. Deserunt ab dolor odio. Sunt sit enim numquam nostrum aperiam corrupti et officia.</p>
-                <p>Nesciunt at quia deserunt. Illo corrupti repellendus iste. Minima quo tenetur qui. Ut quos omnis laborum ut porro. Voluptatem.</p>
-            </article>
+            <h1>Videoer</h1>
+            <p>Tryk på en video for at redigere den eller <a href="#">tilføj en ny video</a></p>
+            <div class="category">
+                <h3>Ben</h3>
+                <ul>
+                    <li>
+                        <div class="video-thumbnail">
+                            <img src="https://img.youtube.com/vi/-FlxM_0S2lA/default.jpg">
+                        </div>
+                        <div class="info">
+                            <h3>Squats</h3>
+                            <p class="text-overflow">Nesciunt at quia deserunt. Illo corrupti repellendus iste...</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
         </main>
     </div>
-    <div class="login-modal">
-        <div class="login">
-            <h1>Log ind</h1>
-            <input type="text" placeholder="Email">
-            <input type="password" placeholder="Password">
-            <button>Log mig ind</button>
-        </div>
-    </div>
-    <script>
-        window.addEventListener('DOMContentLoaded', function(event) {
-            if (localStorage.getItem('darkTheme') === 'true') document.documentElement.classList.add('dark-theme')
-            function toggleTheme() {
-                const darkTheme = document.documentElement.classList.toggle('dark-theme')
-                localStorage.setItem('darkTheme', darkTheme)
-            }
-            const btnToggleTheme = document.querySelector('.btn-toggle-theme')
-            btnToggleTheme.addEventListener('click', toggleTheme)
-        })
-    </script>
 </body>
 
 </html>
