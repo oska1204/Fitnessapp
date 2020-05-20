@@ -51,31 +51,3 @@ a {
     left: 0;
     top: 0;
 }
-
-main {
-    padding: var(--spacing-xl);
-}
-
-main>h1 {
-    padding: var(--spacing-xl) 0;
-    word-break: break-word;
-}
-
-main>p {
-    padding: var(--spacing-m) 0;
-    margin-bottom: var(--spacing-xl);
-}
-
-.category li {
-    display: flex;
-    margin-bottom: var(--spacing-m);
-}
-
-.category h3 {
-    padding: var(--spacing-m) 0;
-    word-break: break-word;
-}
-
-.category p {
-    padding: var(--spacing-m) 0;
-}

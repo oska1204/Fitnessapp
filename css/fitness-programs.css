@@ -1,26 +1,30 @@
-main {
+main--fitness-programs {
+    background-color: red;
+}
+
+main--fitness-programs .main {
     padding: var(--spacing-xl);
 }
 
-main>h1 {
+main--fitness-programs .main>h1 {
     padding: var(--spacing-xl) 0;
     word-break: break-word;
 }
 
-main>p {
+main--fitness-programs .main>p {
     padding: var(--spacing-m) 0;
     margin-bottom: var(--spacing-xl);
 }
 
-main article {
+main--fitness-programs .main article {
     margin-bottom: var(--spacing-m);
 }
 
-main article h3 {
+main--fitness-programs .main article h3 {
     padding: var(--spacing-m) 0;
     word-break: break-word;
 }
 
-main article p {
+main--fitness-programs .main article p {
     padding: var(--spacing-m) 0;
 }

@@ -3,7 +3,7 @@ class ModalLogin extends HTMLElement {
         super();
         this.innerHTML = `
             <link rel="stylesheet" href="css/login.css">
-            <div class="login-modal">
+            <div class="modal">
                 <div class="login">
                     <h1>Log ind</h1>
                     <input type="text" placeholder="Email">

@@ -1,4 +1,6 @@
-import './webcomponents/header.js';
-import './webcomponents/traeningsprogram.js';
-import './webcomponents/login.js';
+import './web-components/header.js';
+import './web-components/fitness-programs.js';
+import './web-components/videos.js'
+import './web-components/login.js';
+import './utils/crud.js'
 if (localStorage.getItem('darkTheme') === 'true') document.documentElement.classList.add('dark-theme')

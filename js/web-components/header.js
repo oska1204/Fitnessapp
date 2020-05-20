@@ -1,11 +1,11 @@
-import './util/toggleTheme.js'
-import toggleTheme from './util/toggleTheme.js';
+import '../utils/toggle-theme.js'
+import toggleTheme from '../utils/toggle-theme.js';
 class HeaderFitnessapp extends HTMLElement {
     constructor() {
         super();
         this.innerHTML = `
             <link rel="stylesheet" href="css/header.css">
-            <header>
+            <div class=".header">
                 <h2>Fitnessapp</h2>
                 <nav>
                     <ul>
@@ -15,7 +15,7 @@ class HeaderFitnessapp extends HTMLElement {
                         <li><a class="btn-toggle-theme">☀</a></li>
                     </ul>
                 </nav>
-            </header>
+            </div>
         `
         const loaded = function () {
             const btnToggleTheme = document.querySelector('.btn-toggle-theme')
@@ -24,4 +24,4 @@ class HeaderFitnessapp extends HTMLElement {
         this.addEventListener('DOMContentLoaded', loaded())
     }
 }
-customElements.define('header-fitnessapp', HeaderFitnessapp);
+customElements.define('header--fitness-app', HeaderFitnessapp);

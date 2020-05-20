@@ -1,9 +1,9 @@
-class MainTraeaeningsprogram extends HTMLElement {
+class MainFitnessPrograms extends HTMLElement {
     constructor() {
         super();
         this.innerHTML = `
-            <link rel="stylesheet" href="css/traeningsprogram.css">
-            <main>
+            <link rel="stylesheet" href="css/fitness-programs.css">
+            <div class="main">
                 <h1>Træningsprogram</h1>
                 <p>Tryk på en plan for at ændre den eller <a href="#">opret en ny plan</a></p>
                 <article>
@@ -19,8 +19,8 @@ class MainTraeaeningsprogram extends HTMLElement {
                     <p>Consequuntur maiores et dicta neque. Deserunt ab dolor odio. Sunt sit enim numquam nostrum aperiam corrupti et officia.</p>
                     <p>Nesciunt at quia deserunt. Illo corrupti repellendus iste. Minima quo tenetur qui. Ut quos omnis laborum ut porro. Voluptatem.</p>
                 </article>
-            </main>
+            </div>
         `
     }
 }
-customElements.define('main-traeningsprogram', MainTraeaeningsprogram);
+customElements.define('main--fitness-programs', MainFitnessPrograms);
