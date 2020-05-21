@@ -1,0 +1,45 @@
+.videos {
+	& .main > h1 {
+		padding: var(--spacing-xl) 0;
+		word-break: break-word;
+	}
+
+	& .main > p {
+		padding: var(--spacing-m) 0;
+		margin-bottom: var(--spacing-xl);
+	}
+
+	& .category {
+		margin-bottom: var(--spacing-xl);
+	}
+
+	& .category li {
+		display: flex;
+		margin-bottom: var(--spacing-l);
+	}
+
+	& .category > h3 {
+		padding: var(--spacing-m) 0;
+		margin-bottom: var(--spacing-m);
+		word-break: break-word;
+	}
+
+	& .video-thumbnail {
+		display: flex;
+		height: 68px;
+		margin-right: var(--spacing-m);
+	}
+
+	& .video-thumbnail img {
+		object-fit: cover;
+	}
+
+	& .info h3 {
+		padding: var(--spacing-s) 0;
+		margin-top: var(--spacing-s);
+	}
+
+	& .info p {
+		padding: var(--spacing-s) 0;
+	}
+}

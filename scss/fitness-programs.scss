@@ -1,0 +1,14 @@
+.fitness-programs {
+    & article {
+        margin-bottom: var(--spacing-m);
+    }
+
+    & article h3 {
+        padding: var(--spacing-m) 0;
+        word-break: break-word;
+    }
+
+    & article p {
+        padding: var(--spacing-m) 0;
+    }
+}

@@ -1,6 +1,24 @@
-import './web-components/header.js';
-import './web-components/fitness-programs.js';
-import './web-components/videos.js'
-import './web-components/login.js';
-import './utils/crud.js'
-if (localStorage.getItem('darkTheme') === 'true') document.documentElement.classList.add('dark-theme')
+import fitnessPrograms from './html-templates/compiled/fitness-programs.js';
+import videos from './html-templates/compiled/videos.js';
+import login from './html-templates/compiled/login.js';
+import './utils/crud.js';
+
+if (localStorage.getItem('darkTheme') === 'true')
+	document.documentElement.classList.add('dark-theme');
+
+switch (location.pathname) {
+	case '/fitness-programs/':
+		fitnessPrograms();
+		break;
+
+	case '/videos/':
+		videos();
+		break;
+
+	case '/':
+		login();
+		break;
+
+	default:
+		break;
+}

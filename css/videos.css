@@ -1,47 +1,43 @@
-main--videos .main {
-    padding: var(--spacing-xl);
-}
-
-main--videos .main>h1 {
+.videos .main > h1 {
     padding: var(--spacing-xl) 0;
     word-break: break-word;
 }
 
-main--videos .main>p {
+.videos .main > p {
     padding: var(--spacing-m) 0;
     margin-bottom: var(--spacing-xl);
 }
 
-main--videos .category {
+.videos .category {
     margin-bottom: var(--spacing-xl);
 }
 
-main--videos .category li {
+.videos .category li {
     display: flex;
     margin-bottom: var(--spacing-l);
 }
 
-main--videos .category>h3 {
+.videos .category > h3 {
     padding: var(--spacing-m) 0;
     margin-bottom: var(--spacing-m);
     word-break: break-word;
 }
 
-main--videos .video-thumbnail {
+.videos .video-thumbnail {
     display: flex;
     height: 68px;
     margin-right: var(--spacing-m);
 }
 
-main--videos .video-thumbnail img {
+.videos .video-thumbnail img {
     object-fit: cover;
 }
 
-main--videos .info h3 {
+.videos .info h3 {
     padding: var(--spacing-s) 0;
     margin-top: var(--spacing-s);
 }
 
-main--videos .info p {
+.videos .info p {
     padding: var(--spacing-s) 0;
 }
