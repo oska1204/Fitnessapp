@@ -1,6 +1,6 @@
-import Template from './_template.js';
-import toggleTheme from '../../utils/toggle-theme.js';
-import sameUrl from '../../utils/same-url.js';
+import Template from '../_template.js';
+import toggleTheme from '../../../utils/toggle-theme.js';
+import sameUrl from '../../../utils/same-url.js';
 
 export default class Header extends Template {
 	constructor() {
@@ -20,7 +20,7 @@ export default class Header extends Template {
 		this.btnToggleTheme.addEventListener('click', toggleTheme);
 		this.links = this.template.querySelectorAll('a[href]');
 		this.links.forEach(function (element) {
-            element.addEventListener('click', sameUrl)
-        });
+			element.addEventListener('click', sameUrl);
+		});
 	}
 }

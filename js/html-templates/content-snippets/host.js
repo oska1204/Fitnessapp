@@ -7,6 +7,6 @@ export default class Host extends Template {
                 <link rel="stylesheet" href="../css/${name}.css">
             </div>
         `);
-        this.element = this.template.firstElementChild
+        this.element = this.template.firstElementChild;
 	}
 }

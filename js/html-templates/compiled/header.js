@@ -1,13 +1,14 @@
 import Host from '../content-snippets/host.js';
-import Header from '../content-snippets/header.js';
 
-function header() {
-	const headerHost = new Host('header');
-	const header = new Header();
+import Content from '../content-snippets/header/content.js';
 
-	headerHost.element.appendChild(header.template);
+export default function header() {
+	const header = document.querySelector('header')
 
-	return headerHost.element;
+	const host = new Host('header');
+
+	const content = new Content();
+
+	header.appendChild(host.template);
+	host.element.appendChild(content.template);
 }
-
-export default header();
