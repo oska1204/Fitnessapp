@@ -12,7 +12,7 @@ export default class category extends Template {
                         </div>
                         <div class="info">
                             <h3>Squats</h3>
-                            <p class="text-overflow">Nesciunt at quia deserunt. Illo corrupti repellendus iste...</p>
+                            <p class="text-overflow">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Culpa rerum possimus iste atque nesciunt consequatur dicta! Earum, molestiae. Molestias laborum sint soluta sunt animi commodi laudantium recusandae excepturi unde blanditiis.</p>
                         </div>
                     </li>
                     <li>

@@ -114,3 +114,9 @@ main > div {
 	left: 0;
 	top: 0;
 }
+
+.text-overflow {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
