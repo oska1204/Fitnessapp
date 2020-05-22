@@ -18,6 +18,7 @@ customElements.define(
 				<li><a href="/fitness-programs">Træningsprogram</a></li>
 				<li><a href="/videos">Videoer</a></li>
 				<li><a href="#">Brugere</a></li>
+				<li><a href="/login">login</a></li>
 				<li><a class="btn-toggle-theme">☼</a></li>
 			</ul>
 		</nav>
