@@ -1,14 +1,35 @@
-import Host from '../content-snippets/host.js';
+import toggleTheme from '../../utils/toggle-theme.js';
+import sameUrl from '../../utils/same-url.js';
 
-import Content from '../content-snippets/header/content.js';
+const styleSheet = document.createElement('link');
+styleSheet.rel = 'stylesheet';
+styleSheet.href = '/css/header.css';
+document.head.appendChild(styleSheet);
 
-export default function header() {
-	const header = document.querySelector('header')
+customElements.define(
+	'c-header',
+	class extends HTMLElement {
+		constructor() {
+			super();
+			this.innerHTML = `
+		<h2><a href="/">Fitnessapp</a></h2>
+		<nav>
+			<ul>
+				<li><a href="/fitness-programs">Træningsprogram</a></li>
+				<li><a href="/videos">Videoer</a></li>
+				<li><a href="#">Brugere</a></li>
+				<li><a class="btn-toggle-theme">☼</a></li>
+			</ul>
+		</nav>
+	`;
 
-	const host = new Host('header');
+			this.btnToggleTheme = this.querySelector('.btn-toggle-theme');
+			this.btnToggleTheme.addEventListener('click', toggleTheme);
 
-	const content = new Content();
-
-	header.appendChild(host.template);
-	host.element.appendChild(content.template);
-}
+			this.links = this.querySelectorAll('a[href]');
+			this.links.forEach(function (element) {
+				element.addEventListener('click', sameUrl);
+			});
+		}
+	}
+);

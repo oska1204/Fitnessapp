@@ -1,22 +1,12 @@
-.fitness-programs > h1 {
-    padding: var(--spacing-xl) 0;
-    word-break: break-word;
-}
-
-.fitness-programs > p {
-    padding: var(--spacing-m) 0;
-    margin-bottom: var(--spacing-xl);
-}
-
-.fitness-programs article {
+c-articles--fitness-programs article {
     margin-bottom: var(--spacing-m);
 }
 
-.fitness-programs article h3 {
+c-articles--fitness-programs article h3 {
     padding: var(--spacing-m) 0;
     word-break: break-word;
 }
 
-.fitness-programs article p {
+c-articles--fitness-programs article p {
     padding: var(--spacing-m) 0;
 }

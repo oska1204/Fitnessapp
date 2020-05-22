@@ -86,12 +86,12 @@ main {
     cursor: pointer;
 }
 
-main > div > h1 {
+c-main--heading > h1 {
     padding: var(--spacing-xl) 0;
     word-break: break-word;
 }
 
-main > div > p {
+c-main--heading > p {
     padding: var(--spacing-m) 0;
     margin-bottom: var(--spacing-xl);
 }
