@@ -1,5 +1,5 @@
 import '../compiled/header.js';
-import '../content-snippets/main/heading.js';
+import '../web-components/main-heading.js';
 import '../content-snippets/fitness-programs/article.js';
 
 const styleSheet = document.createElement('link');
@@ -10,7 +10,7 @@ document.head.appendChild(styleSheet);
 /*test*/ var data = {
 	main: {
 		heading: 'Træningsprogram',
-		subText: 'Tryk på en plan for at ændre den eller <a href="#">opret en ny plan</a>',
+		subText: `Tryk på en plan for at ændre den eller <a href="#">opret en ny plan</a>`,
 		articles: [
 			{
 				heading: 'Ben program',
@@ -33,16 +33,20 @@ export default function fitnessPrograms() {
 		</header>
 		<div class="wrapper">
 			<main>
-				<c-main--heading></c-main--heading>
-				<c-articles--fitness-programs></c-articles--fitness-programs>
+				<c-main--heading>
+					<script content>
+						self._heading = ${JSON.stringify(data.main.heading)}
+						self._subText = ${JSON.stringify(data.main.subText)}
+					</script content>
+				</c-main--heading>
+				<c-articles--fitness-programs>
+					<script content>
+						self._data = ${JSON.stringify(data.main.articles)}
+					</script content>
+				</c-articles--fitness-programs>
 			</main>
 		</div>
 	`;
-	const mainHeading = template.content.querySelector('c-main--heading');
-	const articlesFitnessPrograms = template.content.querySelector('c-articles--fitness-programs');
 
 	document.body.appendChild(template.content);
-
-	mainHeading._data = data.main;
-	articlesFitnessPrograms._data = data.main.articles;
 }

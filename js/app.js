@@ -1,3 +1,4 @@
+import scriptContent from '/js/utils/scriptContent.js'
 import fitnessPrograms from './html-templates/compiled/fitness-programs.js';
 // import videos from './html-templates/compiled/videos.js';
 import login from './html-templates/compiled/login.js';
@@ -27,3 +28,5 @@ switch (location.pathname) {
 	default:
 		break;
 }
+
+scriptContent()

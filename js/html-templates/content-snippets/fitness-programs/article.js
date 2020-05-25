@@ -26,9 +26,7 @@ customElements.define(
 			super();
 		}
 		set _data(data) {
-			this.innerHTML = `
-				 ${createArticles(data)}
-			`;
+			this.insertAdjacentHTML('beforeend', createArticles(data))
 		}
 	}
 );
