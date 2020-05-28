@@ -1,13 +1,10 @@
-import '../compiled/header.js';
-import '../web-components/main-heading.js';
-import '../content-snippets/fitness-programs/article.js';
+import html from '/js/utils/html.js'
 
-const styleSheet = document.createElement('link');
-styleSheet.rel = 'stylesheet';
-styleSheet.href = '/css/fitness-programs.css';
-document.head.appendChild(styleSheet);
+import '/js/web-components/header.js';
+import '/js/web-components/main-heading.js';
+import '/js/web-components/fitness-programs-section.js'
 
-/*test*/ var data = {
+/*test*/ const data = {
 	main: {
 		heading: 'Træningsprogram',
 		subText: `Tryk på en plan for at ændre den eller <a href="#">opret en ny plan</a>`,
@@ -27,23 +24,17 @@ export default function fitnessPrograms() {
 	const template = document.createElement('template');
 	// Visual Studio Code: Ctrl K + M --> HTML
 	// Visual Studio Code: Ctrl K + M --> Javascript
-	template.innerHTML = `
+	template.innerHTML = html`
+		<link rel="stylesheet" href="/css/fitness-programs.css">
 		<header>
 			<c-header></c-header>
 		</header>
 		<div class="wrapper">
 			<main>
-				<c-main--heading>
-					<script content>
-						self._heading = ${JSON.stringify(data.main.heading)}
-						self._subText = ${JSON.stringify(data.main.subText)}
-					</script content>
-				</c-main--heading>
-				<c-articles--fitness-programs>
-					<script content>
-						self._data = ${JSON.stringify(data.main.articles)}
-					</script content>
-				</c-articles--fitness-programs>
+				<c-main-heading data-heading="${data.main.heading}" data-sub-text="${data.main.subText}">
+				</c-main-heading>
+				<c-fitness-programs-section data-articles="${JSON.stringify(data.main.articles)}">
+				</c-fitness-programs-section>
 			</main>
 		</div>
 	`;

@@ -1,13 +1,16 @@
 import Connect from './connect.js'
-class Crud extends Connect {
+export class Crud extends Connect {
     constructor(target = '') {
         super(target)
     }
     create() {
 
     }
-    read() {
-
+    read(name) {
+        if (sessionStorage[target + name])
+            return JSON.parse(sessionStorage[target + name])
+        const data = fetch()
+        sessionStorage[target + name] = JSON.stringify(data)
     }
     update() {
 
@@ -16,5 +19,3 @@ class Crud extends Connect {
 
     }
 }
-
-console.log(new Crud('cd'))

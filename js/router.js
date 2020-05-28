@@ -1,8 +1,6 @@
-import scriptContent from '/js/utils/scriptContent.js'
-import fitnessPrograms from './html-templates/compiled/fitness-programs.js';
-// import videos from './html-templates/compiled/videos.js';
-import login from './html-templates/compiled/login.js';
-import './utils/crud.js';
+import fitnessPrograms from '/js/routes/fitness-programs.js';
+// import login from '/js/compiled/login.js';
+import videos from '/js/routes/videos.js';
 
 if (localStorage.getItem('darkTheme') === 'true')
 	document.documentElement.classList.add('dark-theme');
@@ -13,7 +11,6 @@ switch (location.pathname) {
 		break;
 
 	case '/videos/':
-		header();
 		videos();
 		break;
 
@@ -28,5 +25,3 @@ switch (location.pathname) {
 	default:
 		break;
 }
-
-scriptContent()
