@@ -19,8 +19,11 @@
 export default function html(strings, ...data) {
 	let val = ''
 	for (let i = 0; i < data.length; i++) {
-	  val += strings[i]
-		val += data[i].replace(/"/g, '&#0034')
+		val += strings[i]
+		let item = data[i]
+		if (typeof item === 'object')
+			item = JSON.stringify(item)
+		val += item.replace(/"/g, '&#0034')
 	}
 	val += strings[strings.length - 1]
 	return val
