@@ -33,7 +33,7 @@ export default function fitnessPrograms() {
 			<main>
 				<c-main-heading data-heading="${data.main.heading}" data-sub-text="${data.main.subText}">
 				</c-main-heading>
-				<c-fitness-programs-section data-articles="${JSON.stringify(data.main.articles)}">
+				<c-fitness-programs-section data-articles="${data.main.articles}">
 				</c-fitness-programs-section>
 			</main>
 		</div>
