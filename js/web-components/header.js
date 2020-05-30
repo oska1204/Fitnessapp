@@ -1,11 +1,11 @@
+import CustomElement from '../utils/custom-element.js';
+
 import toggleTheme from '/js/utils/toggle-theme.js';
 import sameUrl from '/js/utils/same-url.js';
 
-const nodes = {}
-
 customElements.define(
 	'c-header',
-	class extends HTMLElement {
+	class extends CustomElement {
 		constructor() {
 			super();
 			this.innerHTML = `
@@ -22,11 +22,11 @@ customElements.define(
 				</nav>
 			`;
 
-			nodes.btnToggleTheme = this.querySelector('.btn-toggle-theme');
-			nodes.links = this.querySelectorAll('a[href]');
+			this.nodes.btnToggleTheme = this.querySelector('.btn-toggle-theme');
+			this.nodes.links = this.querySelectorAll('a[href]');
 			
-			nodes.btnToggleTheme.addEventListener('click', toggleTheme);
-			nodes.links.forEach(function (element) {
+			this.nodes.btnToggleTheme.addEventListener('click', toggleTheme);
+			this.nodes.links.forEach(function (element) {
 				element.addEventListener('click', sameUrl);
 			});
 		}

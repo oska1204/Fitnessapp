@@ -1,13 +1,14 @@
-const nodes = {}
+import CustomElement from '/js/utils/custom-element.js'
 
 customElements.define(
 	'c-main-heading',
-	class extends HTMLElement {
+	class extends CustomElement {
 		constructor() {
 			super();
-			this.insertAdjacentHTML('beforeend', `
-            	<h1>${this.dataset.heading}</h1>
-				<p>${this.dataset.subText}</p>
+			
+			this.insertAdjacentHTML('beforeend', this.html`
+            	<h1>${this.state.heading}</h1>
+				${this.wrap`<p>${this.state.paragraphs}</p>`}
 			`)
 		}
 	}

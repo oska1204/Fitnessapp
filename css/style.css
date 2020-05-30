@@ -41,7 +41,7 @@ main {
     padding: var(--spacing-xl);
 }
 
-.modal {
+c-modal {
     position: fixed;
     top: 0;
     left: 0;
@@ -51,7 +51,7 @@ main {
     display: flex;
 }
 
-.modal > .content {
+c-modal > .modal-wrapper {
     margin: auto;
 }
 
@@ -93,6 +93,9 @@ c-main-heading > h1 {
 
 c-main-heading > p {
     padding: var(--spacing-m) 0;
+}
+
+c-main-heading > p:last-of-type {
     margin-bottom: var(--spacing-xl);
 }
 

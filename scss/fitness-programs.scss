@@ -1,14 +1,14 @@
 c-fitness-programs-section {
     & article {
         margin-bottom: var(--spacing-m);
-    }
-
-    & article h3 {
-        padding: var(--spacing-m) 0;
-        word-break: break-word;
-    }
-
-    & article p {
-        padding: var(--spacing-m) 0;
+        
+        h3 {
+            padding: var(--spacing-m) 0;
+            word-break: break-word;
+        }
+        
+        p {
+            padding: var(--spacing-m) 0;
+        }
     }
 }

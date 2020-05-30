@@ -1,10 +1,10 @@
-import Modal from '../html-templates/modal.js';
-import Form from '../html-templates/login/form.js';
+import '/js/web-components/login-modal.js'
 
 export default function login() {
-	const modal = new Modal();
-	const form = new Form();
-
-	document.body.appendChild(modal.template);
-	modal.content.appendChild(form.template)
+	const template = document.createElement('template')
+	template.innerHTML = `
+		<c-login-modal>
+		</c-login-modal>
+	`
+	document.body.appendChild(template.content)
 }

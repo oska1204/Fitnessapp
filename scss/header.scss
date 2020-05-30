@@ -1,59 +1,57 @@
 c-header {
-	& {
-		display: flex;
-		flex-wrap: wrap;
-		justify-content: space-between;
-		align-items: center;
-		border: 2px solid;
-		padding: var(--spacing-m);
-	}
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-items: center;
+	border: 2px solid;
+	padding: var(--spacing-m);
 
-	& h2 {
-        word-break: break-word;
+	h2 {
+		word-break: break-word;
 		place-self: start;
 		margin: var(--spacing-l) var(--spacing-m) var(--spacing-m);
-    }
-    
-    & h2 a {
-        text-decoration: none;
-    }
 
-	& nav {
+		a {
+			text-decoration: none;
+		}
+	}
+
+	nav {
 		flex-grow: 1;
+		
+		ul {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: flex-end;
+			list-style: none;
+			align-items: center;
+		}
+		
+		li {
+			display: flex;
+			margin: var(--spacing-m);
+		}
+		
+		a {
+			padding: var(--spacing-l);
+			border: 2px solid;
+			border-radius: 0.5rem;
+			text-decoration: none;
+			color: var(--secondary-color);
+			background-color: var(--secondary-bg-color);
+			word-wrap: break-word;
+			font-weight: bold;
+			text-transform: uppercase;
+			font-size: 80%;
+			word-break: break-word;
+		}
 	}
 
-	& nav ul {
-		display: flex;
-		flex-wrap: wrap;
-		justify-content: flex-end;
-		list-style: none;
-		align-items: center;
-	}
-
-	& nav li {
-		display: flex;
-		margin: var(--spacing-m);
-	}
-
-	& nav a {
-		padding: var(--spacing-l);
-		border: 2px solid;
-		border-radius: 0.5rem;
-		text-decoration: none;
-		color: var(--secondary-color);
-		background-color: var(--secondary-bg-color);
-		word-wrap: break-word;
-		font-weight: bold;
-		text-transform: uppercase;
-		font-size: 80%;
-		word-break: break-word;
-	}
-
-	& .btn-toggle-theme {
+	.btn-toggle-theme {
 		cursor: pointer;
 		font-size: 1.5rem;
 		line-height: 0.65;
 		user-select: none;
-        -webkit-text-stroke: 1px;
+		-webkit-text-stroke: 1px;
 	}
 }

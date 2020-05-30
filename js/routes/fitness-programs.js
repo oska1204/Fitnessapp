@@ -7,7 +7,7 @@ import '/js/web-components/fitness-programs-section.js'
 /*test*/ const data = {
 	main: {
 		heading: 'Træningsprogram',
-		subText: `Tryk på en plan for at ændre den eller <a href="#">opret en ny plan</a>`,
+		paragraphs: 'Tryk på en plan for at ændre den eller <a href="#">opret en ny plan</a>',
 		articles: [
 			{
 				heading: 'Ben program',
@@ -23,7 +23,7 @@ import '/js/web-components/fitness-programs-section.js'
 export default function fitnessPrograms() {
 	const template = document.createElement('template');
 	// Visual Studio Code: Ctrl K + M --> HTML
-	// Visual Studio Code: Ctrl K + M --> Javascript
+	// Visual Studio Code: Ctrl K + M --> JavaScript
 	template.innerHTML = html`
 		<link rel="stylesheet" href="/css/fitness-programs.css">
 		<header>
@@ -31,7 +31,7 @@ export default function fitnessPrograms() {
 		</header>
 		<div class="wrapper">
 			<main>
-				<c-main-heading data-heading="${data.main.heading}" data-sub-text="${data.main.subText}">
+				<c-main-heading data-heading="${data.main.heading}" data-paragraphs="${data.main.paragraphs}">
 				</c-main-heading>
 				<c-fitness-programs-section data-articles="${data.main.articles}">
 				</c-fitness-programs-section>
