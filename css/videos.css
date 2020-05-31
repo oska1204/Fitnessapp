@@ -8,7 +8,7 @@ c-videos-section .category > h3 {
     word-break: break-word;
 }
 
-c-videos-section .category li {
+c-videos-section li {
     display: flex;
     margin-bottom: var(--spacing-l);
 }

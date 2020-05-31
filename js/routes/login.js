@@ -1,5 +1,3 @@
-import '/js/web-components/login-modal.js'
-
 export default function login() {
 	const template = document.createElement('template')
 	template.innerHTML = `

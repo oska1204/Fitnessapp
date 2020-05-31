@@ -1,9 +1,9 @@
-export default function data(state, dataset) {
+export default function data(data, dataset) {
     for (const item in dataset) {
         try {
-            state[item] = JSON.parse(dataset[item])
+            data[item] = JSON.parse(dataset[item])
         } catch (error) {
-            state[item] = dataset[item]
+            data[item] = dataset[item]
         }
     }
 }

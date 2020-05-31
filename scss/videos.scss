@@ -7,11 +7,11 @@ c-videos-section {
 			margin-bottom: var(--spacing-m);
 			word-break: break-word;
 		}
+	}
 
-		li {
-			display: flex;
-			margin-bottom: var(--spacing-l);
-		}
+	li {
+		display: flex;
+		margin-bottom: var(--spacing-l);
 	}
 
 	.video-thumbnail {

@@ -1,9 +1,5 @@
 import html from '/js/utils/html.js'
 
-import '/js/web-components/header.js';
-import '/js/web-components/main-heading.js';
-import '/js/web-components/fitness-programs-section.js'
-
 /*test*/ const data = {
 	main: {
 		heading: 'Træningsprogram',

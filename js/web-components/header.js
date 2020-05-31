@@ -1,5 +1,3 @@
-import CustomElement from '../utils/custom-element.js';
-
 import toggleTheme from '/js/utils/toggle-theme.js';
 import sameUrl from '/js/utils/same-url.js';
 
@@ -22,11 +20,11 @@ customElements.define(
 				</nav>
 			`;
 
-			this.nodes.btnToggleTheme = this.querySelector('.btn-toggle-theme');
-			this.nodes.links = this.querySelectorAll('a[href]');
+			const btnToggleTheme = this.querySelector('.btn-toggle-theme');
+			const links = this.querySelectorAll('a[href]');
 			
-			this.nodes.btnToggleTheme.addEventListener('click', toggleTheme);
-			this.nodes.links.forEach(function (element) {
+			btnToggleTheme.addEventListener('click', toggleTheme);
+			links.forEach(function (element) {
 				element.addEventListener('click', sameUrl);
 			});
 		}

@@ -1,7 +1,3 @@
-import CustomElement from '/js/utils/custom-element.js'
-
-import '/js/web-components/modal.js'
-
 customElements.define(
     'c-login-modal',
     class extends CustomElement {

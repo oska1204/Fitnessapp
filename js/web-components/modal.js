@@ -1,5 +1,3 @@
-import CustomElement from '/js/utils/custom-element.js'
-
 customElements.define(
     'c-modal',
     class extends CustomElement {
@@ -10,8 +8,8 @@ customElements.define(
                 <div class="modal-wrapper">
                 </div>
             `
-            this.nodes.modalWrapper = this.querySelector('.modal-wrapper')
-            this.nodes.modalWrapper.appendChild(template.content)
+            const modalWrapper = this.querySelector('.modal-wrapper')
+            modalWrapper.appendChild(template.content)
         }
     }
 )
