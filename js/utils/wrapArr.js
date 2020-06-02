@@ -37,11 +37,11 @@ console.log(template.content)
 //   <p>​Second paragraph.​</p>​
 */
 
-export default function wrapArr(strings, arr, ...data) {
+export default function wrapArr([, ...strings], arr, ...data) {
     return arr.map(obj => {
         let val = ''
         for (let i = 0; i < data.length; i++) {
-            val += strings[i + 1]
+            val += strings[i]
             let item = obj[data[i]]
             const startTag = data[i][0]
             const content = obj[data[i][1]]
