@@ -17,6 +17,7 @@ c-videos-section .video-thumbnail {
     display: flex;
     height: 68px;
     margin-right: var(--spacing-m);
+    align-self: center;
 }
 
 c-videos-section .video-thumbnail img {

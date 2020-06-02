@@ -18,6 +18,7 @@ c-videos-section {
 		display: flex;
 		height: 68px;
 		margin-right: var(--spacing-m);
+		align-self: center;
 
 		img {
 			object-fit: cover;
