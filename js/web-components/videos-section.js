@@ -9,26 +9,27 @@ customElements.define(
                     <div class="category">
                         <h3>${category.heading}</h3>
                         <ul>
-                            ${this.ul(category.ul)}
+                            ${
+                            this.wrapArr`
+                                ${category.ul}
+                                <li>
+                                    <div class="video-thumbnail">
+                                        <img src="${'image'}">
+                                    </div>
+                                    <div class="info">
+                                        <h3>${'heading'}</h3>
+                                        ${[
+                                            '<p class="text-overflow">',
+                                                'paragraphs',
+                                            '</p>'
+                                        ]}
+                                    </div>
+                                </li>
+                            `}
                         </ul>
                     </div>
                 `);
             });
-        }
-        
-        ul(ul) {
-            return ul.map(li => `
-                <li>
-                    <div class="video-thumbnail">
-                        <img src="${li.image}">
-                    </div>
-                    <div class="info">
-                        <h3>${li.heading}</h3>
-                        ${this.wrap`<p class="text-overflow">${li.paragraphs}</p>`}
-                    </div>
-                </li>
-            `
-            ).join('')
         }
     }
 );
