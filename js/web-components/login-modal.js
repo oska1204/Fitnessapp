@@ -4,14 +4,14 @@ customElements.define(
         constructor() {
             super()
             this.innerHTML = `
-            <c-modal>
-                <form class="login">
-                    <h1>Log ind</h1>
-                    <input type="text" placeholder="Email">
-                    <input type="password" placeholder="Password" autocomplete="current-password">
-                    <button>Log mig ind</button>
-                </form>
-            </c-modal>
+                <c-modal>
+                    <form class="login">
+                        <h1>Log ind</h1>
+                        <input type="text" placeholder="Email">
+                        <input type="password" placeholder="Password" autocomplete="current-password">
+                        <button>Log mig ind</button>
+                    </form>
+                </c-modal>
             `
         }
     }

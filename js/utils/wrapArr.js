@@ -30,11 +30,11 @@ console.log(template.content)
 
 // Logs:
 // #document-fragment
-//   <h1>​Hello There​</h1>​
-//   <p>​Single paragraph.​</p>​
-//   <h1>​General Kenobi​</h1>​
-//   <p>​First paragraph.​</p>​
-//   <p>​Second paragraph.​</p>​
+//   <h1>Hello There</h1>
+//   <p>Single paragraph.</p>
+//   <h1>General Kenobi</h1>
+//   <p>First paragraph.</p>
+//   <p>Second paragraph.</p>
 */
 
 export default function wrapArr([, ...strings], arr, ...data) {
