@@ -1,9 +1,9 @@
 c-fitness-programs-section article {
-    margin-bottom: var(--spacing-m);
+    margin-bottom: var(--spacing-l);
 }
 
 c-fitness-programs-section article h3 {
-    padding: var(--spacing-m) 0;
+    padding: var(--spacing-l) 0;
     word-break: break-word;
 }
 

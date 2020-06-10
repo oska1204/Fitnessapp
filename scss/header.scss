@@ -33,12 +33,6 @@ c-header {
 		}
 		
 		a {
-			padding: var(--spacing-l);
-			border: 2px solid;
-			border-radius: 0.5rem;
-			text-decoration: none;
-			color: var(--secondary-color);
-			background-color: var(--secondary-bg-color);
 			word-wrap: break-word;
 			font-weight: bold;
 			text-transform: uppercase;
@@ -51,7 +45,6 @@ c-header {
 		cursor: pointer;
 		font-size: 1.5rem;
 		line-height: 0.65;
-		user-select: none;
 		-webkit-text-stroke: 1px;
 	}
 }

@@ -1,3 +1,8 @@
+html,
+body {
+    height: 100%;
+}
+
 body {
     font-family: Arial, Helvetica, sans-serif;
     color: var(--main-color);
@@ -19,6 +24,7 @@ body {
     --spacing-m: 0.5rem;
     --spacing-l: 0.75rem;
     --spacing-xl: 1rem;
+    --spacing-xxl: 1.25rem;
 }
 
 :root.dark-theme {
@@ -30,6 +36,24 @@ body {
 
 a {
     color: var(--main-color);
+}
+
+p {
+    line-height: 1.35;
+}
+
+button {
+    font-size: 1rem;
+}
+
+button,
+.btn {
+    padding: var(--spacing-l);
+    border: 2px solid;
+    border-radius: 0.5rem;
+    text-decoration: none;
+    color: var(--secondary-color);
+    background-color: var(--secondary-bg-color);
 }
 
 .wrapper {
@@ -47,43 +71,16 @@ c-modal {
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: var(--main-bg-color);
+    background-color: rgba(0, 0, 0, 0.25);
     display: flex;
 }
 
 c-modal > .modal-wrapper {
     margin: auto;
-}
-
-.login {
-    padding: var(--spacing-xl);
-    border: 2px solid;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-}
-
-.login h1 {
-    margin: var(--spacing-m);
-}
-
-.login input,
-.login button {
-    background-color: var(--secondary-bg-color);
-    color: var(--secondary-color);
-    border: 2px solid;
-}
-
-.login input {
-    padding: var(--spacing-s);
-    margin: var(--spacing-m);
-}
-
-.login button {
-    align-self: flex-end;
-    padding: var(--spacing-s) var(--spacing-m);
-    margin: var(--spacing-m);
-    cursor: pointer;
+    background-color: var(--main-bg-color);
+    border: 2px solid var(--main-color);
+    width: 100%;
+    max-width: 1024px;
 }
 
 c-main-heading > h1 {
@@ -96,7 +93,7 @@ c-main-heading > p {
 }
 
 c-main-heading > p:last-of-type {
-    margin-bottom: var(--spacing-xl);
+    margin-bottom: var(--spacing-xxl);
 }
 
 .video {
@@ -118,4 +115,78 @@ c-main-heading > p:last-of-type {
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
+}
+
+c-login {
+    display: flex;
+    height: 100%;
+}
+
+c-login .content {
+    margin: auto;
+}
+
+c-login form {
+    padding: var(--spacing-xl);
+    border: 2px solid;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+
+c-login h1 {
+    margin: var(--spacing-m);
+}
+
+c-login input,
+c-login button {
+    background-color: var(--secondary-bg-color);
+    color: var(--secondary-color);
+    border: 2px solid;
+}
+
+c-login input {
+    padding: var(--spacing-s);
+    margin: var(--spacing-m);
+}
+
+c-login button {
+    align-self: flex-end;
+    padding: var(--spacing-s) var(--spacing-m);
+    margin: var(--spacing-m);
+    cursor: pointer;
+}
+
+c-create-plan {
+    display: block;
+    padding: var(--spacing-xxl) 30px;
+    width: 100%;
+}
+
+c-create-plan > h1 {
+    margin-bottom: var(--spacing-xxl);
+}
+
+c-create-plan > p {
+    margin-bottom: var(--spacing-xxl);
+}
+
+c-create-plan > button::before {
+    content: '+ ';
+    font-size: 1.5rem;
+    line-height: 0;
+    position: relative;
+    top: 2px;
+}
+
+c-create-plan > article h3 {
+    margin-bottom: var(--spacing-xxl);
+}
+
+c-create-plan > article p {
+    margin-bottom: var(--spacing-xxl);
+}
+
+c-create-plan > article .video {
+    margin-bottom: var(--spacing-xxl);
 }

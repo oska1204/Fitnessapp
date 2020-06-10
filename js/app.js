@@ -8,6 +8,8 @@ import videos from '/js/routes/videos.js';
 if (localStorage.getItem('darkTheme') === 'true')
 	document.documentElement.classList.add('dark-theme');
 
+if (customElements) document.querySelector('body > .warning').remove()
+
 switch (location.pathname) {
 	case '/fitness-programs/':
 		fitnessPrograms();

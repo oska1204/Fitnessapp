@@ -10,6 +10,11 @@ customElements.define(
             `
             const modalWrapper = this.querySelector('.modal-wrapper')
             modalWrapper.appendChild(template.content)
+
+            this.addEventListener('click', function (event) {
+                if (this === event.target)
+                    this.parentNode.removeChild(this)
+            })
         }
     }
 )

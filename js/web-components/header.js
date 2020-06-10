@@ -11,11 +11,11 @@ customElements.define(
 				<h2><a href="/">Fitnessapp</a></h2>
 				<nav>
 					<ul>
-						<li><a href="/fitness-programs">Træningsprogram</a></li>
-						<li><a href="/videos">Videoer</a></li>
-						<li><a href="#">Brugere</a></li>
-						<li><a href="/login">login</a></li>
-						<li><a class="btn-toggle-theme">☼</a></li>
+						<li><a class="btn" href="/fitness-programs">Træningsprogram</a></li>
+						<li><a class="btn" href="/videos">Videoer</a></li>
+						<li><a class="btn" href="#">Brugere</a></li>
+						<li><a class="btn" href="/login">login</a></li>
+						<li><button class="btn-toggle-theme">☼</button></li>
 					</ul>
 				</nav>
 			`;
