@@ -62,9 +62,8 @@ export default function fitnessPrograms() {
 	const createPlan = document.querySelector('.create-plan')
 	createPlan.addEventListener('click', function (event) {
 		document.body.insertAdjacentHTML('beforeend', `
-				<c-modal>
-					<c-create-plan>
-					</c-create-plan>
+				<c-modal data-confirm="Slut, uden at gemme?">
+					<c-create-plan></c-create-plan>
 				</c-modal>
 			`)
 	})

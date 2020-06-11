@@ -20,6 +20,8 @@ body {
 	--main-bg-color: #eee;
 	--secondary-color: #222;
 	--secondary-bg-color: #ddd;
+	--third-color: #666;
+	--third-bg-color: #bbb;
 	--spacing-s: 0.25rem;
 	--spacing-m: 0.5rem;
 	--spacing-l: 0.75rem;
@@ -31,6 +33,8 @@ body {
 		--main-bg-color: #111;
 		--secondary-color: #ddd;
 		--secondary-bg-color: #222;
+		--third-color: #999;
+		--third-bg-color: #333;
 	}
 }
 
@@ -42,8 +46,20 @@ p {
 	line-height: 1.35;
 }
 
-button {
+button, input {
 	font-size: 1rem;
+}
+
+input {
+	color: var(--main-color);
+	background: var(--third-bg-color);
+	border: none;
+	padding: var(--spacing-m);
+	border-radius: var(--spacing-m);
+}
+
+::placeholder {
+	color: var(--third-color);
 }
 
 button,
@@ -63,39 +79,6 @@ button,
 
 main {
 	padding: var(--spacing-xl);
-}
-
-c-modal {
-	position: fixed;
-	top: 0;
-	left: 0;
-	right: 0;
-	bottom: 0;
-	background-color: rgba(0, 0, 0, 0.25);
-	display: flex;
-	
-	> .modal-wrapper {
-		margin: auto;
-		background-color: var(--main-bg-color);
-		border: 2px solid var(--main-color);
-		width: 100%;
-		max-width: 1024px;
-	}
-}
-
-c-main-heading {
-	> h1 {
-		padding: var(--spacing-xl) 0;
-		word-break: break-word;
-	}
-
-	> p {
-		padding: var(--spacing-m) 0;
-
-		&:last-of-type {
-			margin-bottom: var(--spacing-xxl);
-		}
-	}
 }
 
 .video {
@@ -119,6 +102,61 @@ c-main-heading {
 	text-overflow: ellipsis;
 }
 
+c-main-heading {
+	> h1 {
+		padding: var(--spacing-xl) 0;
+		word-break: break-word;
+	}
+
+	> p {
+		padding: var(--spacing-m) 0;
+
+		&:last-of-type {
+			margin-bottom: var(--spacing-xxl);
+		}
+	}
+}
+
+c-modal {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	overflow-y: auto;
+	background-color: rgba(0, 0, 0, 0.25);
+	display: flex;
+	
+		&.small > .modal-wrapper {
+			max-width: 768px;
+		}
+	
+	> .modal-wrapper {
+		margin: auto;
+		background-color: var(--main-bg-color);
+		border: 2px solid var(--main-color);
+		width: 100%;
+		max-width: 1024px;
+		position: relative;
+
+		> .exit-btn {
+			position: absolute;
+			top: var(--spacing-m);
+			right: var(--spacing-m);
+			background-color: black;
+			border: 2px solid;
+			border-radius: 50%;
+			width: 2.2rem;
+			height: 2.2rem;
+			line-height: 0.82;
+			text-align: center;
+			font-size: 2rem;
+			letter-spacing: -1px;
+			cursor: default;
+		}
+	}
+}
+
 c-login {
 	display: flex;
 	height: 100%;
@@ -126,6 +164,7 @@ c-login {
 	.content {
 		margin: auto;
 	}
+
 	form {
 		padding: var(--spacing-xl);
 		border: 2px solid;
@@ -163,17 +202,23 @@ c-create-plan {
 	padding: var(--spacing-xxl) 30px;
 	width: 100%;
 
-	> h1 {
+	> input {
 		margin-bottom: var(--spacing-xxl);
+		width: 100%;
 	}
 
-	> p {
-		margin-bottom: var(--spacing-xxl);
+	> .input-heading {
+		font-size: 2rem;
+		font-weight: bold;
+	}
+
+	.buttons {
+		display: flex;
+		justify-content: space-between;
 	}
 
 	> button {
-		&::before {
-			content: '+ ';
+		span {
 			font-size: 1.5rem;
 			line-height: 0;
 			position: relative;
@@ -194,4 +239,9 @@ c-create-plan {
 			margin-bottom: var(--spacing-xxl);
 		}
 	}
+}
+
+c-add-training {
+	display: block;
+	padding: var(--spacing-xxl);
 }
