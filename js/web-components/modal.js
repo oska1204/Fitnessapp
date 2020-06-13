@@ -7,7 +7,7 @@ customElements.define(
             
             document.documentElement.style.overflow = 'hidden'
 
-            const template = this.temp(this)
+            const template = temp(this)
             this.innerHTML = `
                 <div class="modal-wrapper">
                     <span class="exit-btn">x</span>

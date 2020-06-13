@@ -6,7 +6,7 @@ customElements.define(
 			
 			this.insertAdjacentHTML('beforeend', `
             	<h1>${this.data.heading}</h1>
-				${this.wrap`<p>${this.data.paragraphs}</p>`}
+				${wrap`<p>${this.data.paragraphs}</p>`}
 			`)
 		}
 	}

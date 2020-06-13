@@ -7,7 +7,6 @@ customElements.define(
 		constructor() {
 			super();
 			this.innerHTML = `
-				<link rel="stylesheet" href="/css/header.css">
 				<h2><a href="/">Fitnessapp</a></h2>
 				<nav>
 					<ul>

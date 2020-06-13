@@ -8,7 +8,7 @@ customElements.define(
                 this.insertAdjacentHTML('beforeend', `
                     <article>
                         <h3>${article.heading}</h3>
-                        ${this.wrap`<p>${article.paragraphs}</p>`}
+                        ${wrap`<p>${article.paragraphs}</p>`}
                     </article>
                 `)
             });

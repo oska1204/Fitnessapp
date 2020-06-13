@@ -1,3 +1,7 @@
+@import 'fitness-programs';
+@import 'header';
+@import 'videos';
+
 html,
 body {
 	height: 100%;
@@ -46,7 +50,8 @@ p {
 	line-height: 1.35;
 }
 
-button, input {
+button,
+input {
 	font-size: 1rem;
 }
 
@@ -64,7 +69,7 @@ input {
 
 button,
 .btn {
-	padding: var(--spacing-l);
+	padding: var(--spacing-s) var(--spacing-m);
 	border: 2px solid;
 	border-radius: 0.5rem;
 	text-decoration: none;
@@ -124,13 +129,13 @@ c-modal {
 	right: 0;
 	bottom: 0;
 	overflow-y: auto;
-	background-color: rgba(0, 0, 0, 0.25);
+	background-color: rgba(0, 0, 0, 0.27);
 	display: flex;
-	
-		&.small > .modal-wrapper {
-			max-width: 768px;
-		}
-	
+
+	&.small > .modal-wrapper {
+		max-width: 768px;
+	}
+
 	> .modal-wrapper {
 		margin: auto;
 		background-color: var(--main-bg-color);
@@ -153,7 +158,13 @@ c-modal {
 			font-size: 2rem;
 			letter-spacing: -1px;
 			cursor: default;
+			box-shadow: 0 5px 10px rgba(0, 0, 0, 0.25);
 		}
+	}
+	
+	.content {
+		display: block;
+		padding: var(--spacing-xxl);
 	}
 }
 
@@ -166,7 +177,7 @@ c-login {
 	}
 
 	form {
-		padding: var(--spacing-xl);
+		padding: var(--spacing-xxl);
 		border: 2px solid;
 		text-align: center;
 		display: flex;
@@ -174,25 +185,15 @@ c-login {
 	}
 
 	h1 {
-		margin: var(--spacing-m);
-	}
-
-	input,
-	button {
-		background-color: var(--secondary-bg-color);
-		color: var(--secondary-color);
-		border: 2px solid;
+		margin-bottom: var(--spacing-xxl);
 	}
 
 	input {
-		padding: var(--spacing-s);
-		margin: var(--spacing-m);
+		margin-bottom: var(--spacing-xl);
 	}
 
 	button {
 		align-self: flex-end;
-		padding: var(--spacing-s) var(--spacing-m);
-		margin: var(--spacing-m);
 		cursor: pointer;
 	}
 }
@@ -217,12 +218,13 @@ c-create-plan {
 		justify-content: space-between;
 	}
 
-	> button {
+	.add-training {
 		span {
 			font-size: 1.5rem;
 			line-height: 0;
 			position: relative;
 			top: 2px;
+			margin-right: var(--spacing-s);
 		}
 	}
 
@@ -239,9 +241,4 @@ c-create-plan {
 			margin-bottom: var(--spacing-xxl);
 		}
 	}
-}
-
-c-add-training {
-	display: block;
-	padding: var(--spacing-xxl);
 }

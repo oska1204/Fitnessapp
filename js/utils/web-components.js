@@ -1,4 +1,3 @@
-import '/js/web-components/add-training.js'
 import '/js/web-components/create-plan.js'
 import '/js/web-components/fitness-programs-section.js'
 import '/js/web-components/header.js'

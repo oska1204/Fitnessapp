@@ -1,5 +1,3 @@
-import html from '/js/utils/html.js'
-
 const data = {
     main: {
         heading: 'Videoer',
@@ -42,7 +40,6 @@ export default function videos() {
     // Visual Studio Code: Ctrl K + M --> HTML
     // Visual Studio Code: Ctrl K + M --> Javascript
     template.innerHTML = html`
-        <link rel="stylesheet" href="/css/videos.css">
         <header>
             <c-header></c-header>
         </header>

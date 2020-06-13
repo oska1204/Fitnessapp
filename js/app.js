@@ -5,10 +5,18 @@ import fitnessPrograms from '/js/routes/fitness-programs.js';
 import login from '/js/routes/login.js';
 import videos from '/js/routes/videos.js';
 
-if (localStorage.getItem('darkTheme') === 'true')
-	document.documentElement.classList.add('dark-theme');
+import html from '/js/utils/html.js'
+import temp from '/js/utils/temp.js'
+import wrap from '/js/utils/wrap.js'
+import wrapArr from '/js/utils/wrapArr.js'
 
-if (customElements) document.querySelector('body > .warning').remove()
+window.html = html
+window.temp = temp
+window.wrap = wrap
+window.wrapArr = wrapArr
+
+const loading = document.querySelector('.loading')
+if (loading) loading.style.opacity = 0
 
 switch (location.pathname) {
 	case '/fitness-programs/':

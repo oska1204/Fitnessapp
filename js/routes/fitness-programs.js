@@ -1,5 +1,3 @@
-import html from '/js/utils/html.js'
-
 /*test*/ const data = {
 	main: {
 		heading: 'Træningsprogram',
@@ -43,7 +41,6 @@ export default function fitnessPrograms() {
 	// Visual Studio Code: Ctrl K + M --> JavaScript
 
 	template.innerHTML = html`
-		<link rel="stylesheet" href="/css/fitness-programs.css">
 		<header>
 			<c-header></c-header>
 		</header>

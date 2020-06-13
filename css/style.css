@@ -1,3 +1,110 @@
+c-fitness-programs-section article {
+    margin-bottom: var(--spacing-l);
+}
+
+c-fitness-programs-section article h3 {
+    padding: var(--spacing-l) 0;
+    word-break: break-word;
+}
+
+c-fitness-programs-section article p {
+    padding: var(--spacing-m) 0;
+}
+
+c-header {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    border: 2px solid;
+    padding: var(--spacing-m);
+}
+
+c-header h2 {
+    word-break: break-word;
+    place-self: start;
+    margin: var(--spacing-l) var(--spacing-m) var(--spacing-m);
+}
+
+c-header h2 a {
+    text-decoration: none;
+}
+
+c-header nav {
+    flex-grow: 1;
+}
+
+c-header nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    list-style: none;
+    align-items: center;
+}
+
+c-header nav li {
+    display: flex;
+    margin: var(--spacing-m);
+}
+
+c-header nav a {
+    word-wrap: break-word;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 80%;
+    word-break: break-word;
+}
+
+c-header .btn, c-header button {
+    padding: var(--spacing-l);
+}
+
+c-header .btn-toggle-theme {
+    cursor: pointer;
+    font-size: 1.5rem;
+    line-height: 0.65;
+    -webkit-text-stroke: 1px;
+}
+
+c-videos-section .category {
+    margin-bottom: var(--spacing-xl);
+}
+
+c-videos-section .category > h3 {
+    padding: var(--spacing-m) 0;
+    margin-bottom: var(--spacing-m);
+    word-break: break-word;
+}
+
+c-videos-section li {
+    display: flex;
+    margin-bottom: var(--spacing-l);
+}
+
+c-videos-section .video-thumbnail {
+    display: flex;
+    height: 68px;
+    margin-right: var(--spacing-m);
+    align-self: center;
+}
+
+c-videos-section .video-thumbnail img {
+    object-fit: cover;
+}
+
+c-videos-section .info {
+    overflow: hidden;
+}
+
+c-videos-section .info h3 {
+    padding: var(--spacing-s) 0;
+    margin-top: var(--spacing-s);
+}
+
+c-videos-section .info p {
+    padding: var(--spacing-s) 0;
+}
+
 html,
 body {
     height: 100%;
@@ -46,7 +153,8 @@ p {
     line-height: 1.35;
 }
 
-button, input {
+button,
+input {
     font-size: 1rem;
 }
 
@@ -64,7 +172,7 @@ input {
 
 button,
 .btn {
-    padding: var(--spacing-l);
+    padding: var(--spacing-s) var(--spacing-m);
     border: 2px solid;
     border-radius: 0.5rem;
     text-decoration: none;
@@ -122,7 +230,7 @@ c-modal {
     right: 0;
     bottom: 0;
     overflow-y: auto;
-    background-color: rgba(0, 0, 0, 0.25);
+    background-color: rgba(0, 0, 0, 0.27);
     display: flex;
 }
 
@@ -153,6 +261,12 @@ c-modal > .modal-wrapper > .exit-btn {
     font-size: 2rem;
     letter-spacing: -1px;
     cursor: default;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.25);
+}
+
+c-modal .content {
+    display: block;
+    padding: var(--spacing-xxl);
 }
 
 c-login {
@@ -165,7 +279,7 @@ c-login .content {
 }
 
 c-login form {
-    padding: var(--spacing-xl);
+    padding: var(--spacing-xxl);
     border: 2px solid;
     text-align: center;
     display: flex;
@@ -173,25 +287,15 @@ c-login form {
 }
 
 c-login h1 {
-    margin: var(--spacing-m);
-}
-
-c-login input,
-c-login button {
-    background-color: var(--secondary-bg-color);
-    color: var(--secondary-color);
-    border: 2px solid;
+    margin-bottom: var(--spacing-xxl);
 }
 
 c-login input {
-    padding: var(--spacing-s);
-    margin: var(--spacing-m);
+    margin-bottom: var(--spacing-xl);
 }
 
 c-login button {
     align-self: flex-end;
-    padding: var(--spacing-s) var(--spacing-m);
-    margin: var(--spacing-m);
     cursor: pointer;
 }
 
@@ -216,11 +320,12 @@ c-create-plan .buttons {
     justify-content: space-between;
 }
 
-c-create-plan > button span {
+c-create-plan .add-training span {
     font-size: 1.5rem;
     line-height: 0;
     position: relative;
     top: 2px;
+    margin-right: var(--spacing-s);
 }
 
 c-create-plan > article h3 {
@@ -233,9 +338,4 @@ c-create-plan > article p {
 
 c-create-plan > article .video {
     margin-bottom: var(--spacing-xxl);
-}
-
-c-add-training {
-    display: block;
-    padding: var(--spacing-xxl);
 }
