@@ -252,7 +252,7 @@ c-modal > .modal-wrapper > .exit-btn {
     position: absolute;
     top: var(--spacing-m);
     right: var(--spacing-m);
-    background-color: black;
+    background-color: var(--secondary-bg-color);
     border: 2px solid;
     border-radius: 50%;
     width: 2.2rem;
