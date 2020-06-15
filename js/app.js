@@ -1,5 +1,6 @@
 import '/js/utils/custom-element.js'
 import '/js/utils/web-components.js'
+import '/js/utils/link.js'
 
 import fitnessPrograms from '/js/routes/fitness-programs.js';
 import login from '/js/routes/login.js';

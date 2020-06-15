@@ -4,11 +4,14 @@ customElements.define(
 		constructor() {
 			super();
 		}
+		
+		connectedCallback() {
+			const heading = link(this.dataset.heading)
+			const paragraphs = link(this.dataset.paragraphs)
 
-		setData() {
 			this.innerHTML = `
-				<h1>${this.data.heading}</h1>
-				${wrap`<p>${this.data.paragraphs}</p>`}
+				<h1>${heading}</h1>
+				${wrap`<p>${paragraphs}</p>`}
 			`
 		}
 	}

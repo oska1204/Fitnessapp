@@ -3,10 +3,10 @@ customElements.define(
     class extends CustomElement {
         constructor() {
             super();
-        }
-        
-        setData() {
-            this.data.articles.forEach(article => {
+
+            const articles = link(this.dataset.articles)
+            
+            articles.forEach(article => {
                 this.insertAdjacentHTML('beforeend', `
                     <article>
                         <h3>${article.heading}</h3>

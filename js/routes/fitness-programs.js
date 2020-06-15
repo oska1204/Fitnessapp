@@ -35,20 +35,22 @@
 	},
 };
 
+window.data = data
+
 export default function fitnessPrograms() {
 	const template = document.createElement('template');
 	// Visual Studio Code: Ctrl K + M --> HTML
 	// Visual Studio Code: Ctrl K + M --> JavaScript
 
-	template.innerHTML = html`
+	template.innerHTML = `
 		<header>
 			<c-header></c-header>
 		</header>
 		<div class="wrapper">
 			<main>
-				<c-main-heading data-heading="${data.main.heading}" data-paragraphs="${data.main.paragraphs}">
+				<c-main-heading data-heading="main.heading" data-paragraphs="main.paragraphs">
 				</c-main-heading>
-				<c-fitness-programs-section data-articles="${data.main.articles}">
+				<c-fitness-programs-section data-articles="main.articles">
 				</c-fitness-programs-section>
 			</main>
 		</div>
