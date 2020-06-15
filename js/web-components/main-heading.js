@@ -3,11 +3,13 @@ customElements.define(
 	class extends CustomElement {
 		constructor() {
 			super();
-			
-			this.insertAdjacentHTML('beforeend', `
-            	<h1>${this.data.heading}</h1>
+		}
+
+		setData() {
+			this.innerHTML = `
+				<h1>${this.data.heading}</h1>
 				${wrap`<p>${this.data.paragraphs}</p>`}
-			`)
+			`
 		}
 	}
 );

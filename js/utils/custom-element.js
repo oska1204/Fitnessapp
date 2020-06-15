@@ -3,8 +3,20 @@ import data from '/js/utils/data.js'
 class CustomElement extends HTMLElement {
     constructor() {
         super()
-        this.data = {};
-        data(this.data, this.dataset);
+        data.bind(this)();
+    }
+
+    setData() {
+        // To avoid error
+    }
+
+    get data() {
+        return this._data
+    }
+
+    set data(obj) {
+        this._data = obj
+        this.setData()
     }
 }
 

@@ -3,7 +3,9 @@ customElements.define(
     class extends CustomElement {
         constructor() {
             super();
-
+        }
+        
+        setData() {
             this.data.articles.forEach(article => {
                 this.insertAdjacentHTML('beforeend', `
                     <article>
@@ -11,7 +13,7 @@ customElements.define(
                         ${wrap`<p>${article.paragraphs}</p>`}
                     </article>
                 `)
-            });
+            });            
         }
     }
 );

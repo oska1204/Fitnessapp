@@ -1,9 +1,11 @@
-export default function data(data, dataset) {
-    for (const item in dataset) {
+export default function data() {
+    const obj = {}
+    for (const item in this.dataset) {
         try {
-            data[item] = JSON.parse(dataset[item])
+            obj[item] = JSON.parse(this.dataset[item])
         } catch (error) {
-            data[item] = dataset[item]
+            obj[item] = this.dataset[item]
         }
     }
+    this.data = obj
 }

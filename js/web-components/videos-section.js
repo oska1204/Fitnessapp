@@ -3,7 +3,9 @@ customElements.define(
     class extends CustomElement {
         constructor() {
             super()
+        }
 
+        setData() {
             this.data.categories.forEach(category => {
                 this.insertAdjacentHTML('beforeend', `
                     <div class="category">
@@ -28,7 +30,7 @@ customElements.define(
                         </ul>
                     </div>
                 `);
-            });
+            });            
         }
     }
 );

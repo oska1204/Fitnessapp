@@ -3,7 +3,9 @@ customElements.define(
     class extends CustomElement {
         constructor() {
             super();
+        }
 
+        setData() {
             this.innerHTML = `
                 <input class="input-heading" placeholder="Skriv en title på programmet...">
                 <input placeholder="Lav en beskrivende tekst til programmet. Skriv om formål og fitness niveau.">

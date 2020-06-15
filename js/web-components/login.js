@@ -3,6 +3,9 @@ customElements.define(
     class extends CustomElement {
         constructor() {
             super()
+        }
+        
+        setData() {
             this.innerHTML = `
                 <div class="content">
                     <form>
@@ -12,7 +15,7 @@ customElements.define(
                         <button>Log mig ind</button>
                     </form>
                 </div>
-            `
+            `            
         }
     }
 )
