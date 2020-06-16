@@ -7,7 +7,7 @@ customElements.define(
 			super();
 		}
 		
-        setData() {
+        connectedCallback() {
 			this.innerHTML = `
 				<h2><a href="/">Fitnessapp</a></h2>
 				<nav>

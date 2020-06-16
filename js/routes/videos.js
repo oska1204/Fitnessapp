@@ -36,18 +36,20 @@ const data = {
 }
 
 export default function videos() {
+    window.data = data
+    
     const template = document.createElement('template');
     // Visual Studio Code: Ctrl K + M --> HTML
     // Visual Studio Code: Ctrl K + M --> Javascript
-    template.innerHTML = html`
+    template.innerHTML = `
         <header>
             <c-header></c-header>
         </header>
         <div class="wrapper">
             <main>
-                <c-main-heading data-heading="${data.main.heading}" data-paragraphs="${data.main.paragraphs}">
+                <c-main-heading data-heading="data.main.heading" data-paragraphs="data.main.paragraphs">
                 </c-main-heading>
-                <c-videos-section data-categories="${data.main.categories}">
+                <c-videos-section data-categories="data.main.categories">
                 </c-videos-section>
             </main>
         </div>

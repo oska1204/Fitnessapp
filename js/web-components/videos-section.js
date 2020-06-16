@@ -5,8 +5,10 @@ customElements.define(
             super()
         }
 
-        setData() {
-            this.data.categories.forEach(category => {
+        connectedCallback() {
+            const { categories } = this.data
+            
+            categories.forEach(category => {
                 this.insertAdjacentHTML('beforeend', `
                     <div class="category">
                         <h3>${category.heading}</h3>

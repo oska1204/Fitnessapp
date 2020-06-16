@@ -5,7 +5,7 @@ customElements.define(
             super()
         }
         
-        setData() {
+        connectedCallback() {
             const self = this
             
             document.documentElement.style.overflow = 'hidden'

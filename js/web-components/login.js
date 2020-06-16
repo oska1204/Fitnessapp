@@ -5,7 +5,7 @@ customElements.define(
             super()
         }
         
-        setData() {
+        connectedCallback() {
             this.innerHTML = `
                 <div class="content">
                     <form>

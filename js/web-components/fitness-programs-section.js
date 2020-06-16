@@ -3,8 +3,10 @@ customElements.define(
     class extends CustomElement {
         constructor() {
             super();
+        }
 
-            const articles = link(this.dataset.articles)
+        connectedCallback() {
+            const { articles } = this.data
             
             articles.forEach(article => {
                 this.insertAdjacentHTML('beforeend', `

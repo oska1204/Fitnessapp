@@ -5,7 +5,7 @@ customElements.define(
             super();
         }
 
-        setData() {
+        connectedCallback() {
             this.innerHTML = `
                 <input class="input-heading" placeholder="Skriv en title på programmet...">
                 <input placeholder="Lav en beskrivende tekst til programmet. Skriv om formål og fitness niveau.">
@@ -26,7 +26,7 @@ customElements.define(
             const saveProgram = this.querySelector('.add-training')
 
             addTraining.addEventListener('click', function () {
-                const categories = [
+                window.data.categories = [
                     {
                         heading: 'Ben<a href="#">f</a>',
                         ul: [
@@ -57,11 +57,11 @@ customElements.define(
                     },
                 ]
 
-                document.body.insertAdjacentHTML('beforeend', html`
+                document.body.insertAdjacentHTML('beforeend', `
                     <c-modal class="small">
                         <div class="content">
                             <h2>Videoer</h2>
-                            <c-videos-section data-categories="${categories}"></c-videos-section>
+                            <c-videos-section data-categories="data.categories"></c-videos-section>
                         </div>
                     </c-modal>
                 `)
