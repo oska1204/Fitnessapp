@@ -5,11 +5,13 @@ import fitnessPrograms from '/js/routes/fitness-programs.js';
 import login from '/js/routes/login.js';
 import videos from '/js/routes/videos.js';
 
+import generateLink from '/js/utils/generate-link.js'
 import link from '/js/utils/link.js'
 import temp from '/js/utils/temp.js'
 import wrap from '/js/utils/wrap.js'
 import wrapArr from '/js/utils/wrapArr.js'
 
+window.generateLink = generateLink
 window.link = link
 window.temp = temp
 window.wrap = wrap
