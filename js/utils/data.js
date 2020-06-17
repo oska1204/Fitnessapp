@@ -2,7 +2,7 @@ export default function data() {
     const obj = {}
     for (const item in this.dataset) {
         try {
-            obj[item] = link(this.dataset[item])
+            obj[item] = getPath(this.dataset[item])
         } catch (error) {
         }
     }

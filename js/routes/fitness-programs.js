@@ -49,7 +49,7 @@ export default function fitnessPrograms() {
 		</header>
 		<div class="wrapper">
 			<main>
-				<c-main-heading data-heading="${generateLink(data.main.heading)}" data-paragraphs="data.main.paragraphs">
+				<c-main-heading data-heading="${setPath(data.main.heading)}" data-paragraphs="data.main.paragraphs">
 				</c-main-heading>
 				<c-fitness-programs-section data-articles="data.main.articles">
 				</c-fitness-programs-section>
