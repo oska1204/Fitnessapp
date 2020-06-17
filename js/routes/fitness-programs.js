@@ -9,6 +9,25 @@
 					'Consequuntur maiores et dicta neque. Deserunt ab dolor odio. Sunt sit enim numquam nostrum aperiam corrupti et officia.',
 					'Nesciunt at quia deserunt. Illo corrupti repellendus iste. Minima quo tenetur qui. Ut quos omnis laborum ut porro. Voluptatem.',
 				],
+				program: {
+					heading: 'Ben program',
+					paragraphs: [
+						'Consequuntur maiores et dicta neque. Deserunt ab dolor odio. Sunt sit enim numquam nostrum aperiam corrupti et officia.',
+						'Nesciunt at quia deserunt. Illo corrupti repellendus iste. Minima quo tenetur qui. Ut quos omnis laborum ut porro. Voluptatem.',
+					],
+					videos: [
+						{
+							heading: 'Video',
+							paragraphs: 'Ok',
+							video: 'https://youtube.com/embed/-FlxM_0S2lA',
+						},
+						{
+							heading: 'Video',
+							paragraphs: 'Ok',
+							video: 'https://youtube.com/embed/-FlxM_0S2lA',
+						},
+					],
+				},
 			},
 			{
 				heading: 'Overkrop øvelser program',
@@ -16,6 +35,7 @@
 					'Consequuntur maiores et dicta neque. Deserunt ab dolor odio. Sunt sit enim numquam nostrum aperiam corrupti et officia.',
 					'Nesciunt at quia deserunt. Illo corrupti repellendus iste. Minima quo tenetur qui. Ut quos omnis laborum ut porro. Voluptatem.',
 				],
+				program: 'id',
 			},
 			{
 				heading: 'Bliv sommerklar',
@@ -23,6 +43,7 @@
 					'Consequuntur maiores et dicta neque. Deserunt ab dolor odio. Sunt sit enim numquam nostrum aperiam corrupti et officia.',
 					'Nesciunt at quia deserunt. Illo corrupti repellendus iste. Minima quo tenetur qui. Ut quos omnis laborum ut porro. Voluptatem.',
 				],
+				program: 'id',
 			},
 			{
 				heading: 'Fjern din computernakke',
@@ -30,6 +51,7 @@
 					'Consequuntur maiores et dicta neque. Deserunt ab dolor odio. Sunt sit enim numquam nostrum aperiam corrupti et officia.',
 					'Nesciunt at quia deserunt. Illo corrupti repellendus iste. Minima quo tenetur qui. Ut quos omnis laborum ut porro. Voluptatem.',
 				],
+				program: 'id',
 			},
 		],
 	},

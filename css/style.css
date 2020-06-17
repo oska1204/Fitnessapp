@@ -1,5 +1,9 @@
 c-fitness-programs-section article {
     margin-bottom: var(--spacing-l);
+    padding: var(--spacing-m) var(--spacing-xl);
+    border-radius: var(--spacing-m);
+    background-color: var(--secondary-bg-color);
+    cursor: pointer;
 }
 
 c-fitness-programs-section article h3 {
