@@ -8,14 +8,9 @@ customElements.define(
         connectedCallback() {
             this.innerHTML = `
                 <input class="input-heading" placeholder="Skriv en title på programmet...">
-                <input placeholder="Lav en beskrivende tekst til programmet. Skriv om formål og fitness niveau.">
-                <article>
-                    <h3>Squats</h3>
-                    <p>Nesciunt at quia deserunt. Illo corrupti repellendus iste. Minima quo tenetur qui. Ut quos omnis laborum ut porro. Voluptatem.</p>
-                    <div class="video">
-                        <iframe src="https://www.youtube.com/embed/-FlxM_0S2lA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                    </div>
-                </article>
+                <textarea placeholder="Lav en beskrivende tekst til programmet. Skriv om formål og fitness niveau."></textarea>
+                <c-program data-program="${setPath([{heading: 'Squats', paragraphs: 'Nesciunt at quia deserunt. Illo corrupti repellendus iste. Minima quo tenetur qui. Ut quos omnis laborum ut porro. Voluptatem.',video: 'https://www.youtube.com/embed/-FlxM_0S2lA'}])}">
+                </c-program>
                 <div class="buttons">
                     <button class="btn add-training"><span>+</span>Tilføj træning?</button>
                     <button class="btn save-program">Gem</button>

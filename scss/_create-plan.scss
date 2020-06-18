@@ -1,0 +1,50 @@
+c-create-plan {
+	display: block;
+	padding: var(--spacing-xxl) 30px;
+	width: 100%;
+
+	> input {
+		margin-bottom: var(--spacing-xxl);
+		width: 100%;
+	}
+
+    textarea {
+		margin-bottom: var(--spacing-xxl);
+        max-width: 100%;
+        min-width: 100%;
+    }
+
+	> .input-heading {
+		font-size: 2rem;
+		font-weight: bold;
+	}
+
+	.buttons {
+		display: flex;
+		justify-content: space-between;
+	}
+
+	.add-training {
+		span {
+			font-size: 1.5rem;
+			line-height: 0;
+			position: relative;
+			top: 2px;
+			margin-right: var(--spacing-s);
+		}
+	}
+
+	> article {
+		h3 {
+			margin-bottom: var(--spacing-xxl);
+		}
+
+		p {
+			margin-bottom: var(--spacing-xxl);
+		}
+
+		.video {
+			margin-bottom: var(--spacing-xxl);
+		}
+	}
+}

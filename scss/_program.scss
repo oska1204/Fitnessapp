@@ -1,0 +1,32 @@
+.program {
+    padding: var(--spacing-xxl) 30px;
+
+    > h1 {
+        margin-bottom: var(--spacing-xxl);
+    }
+
+    > p {
+        margin-bottom: var(--spacing-l);
+    }
+
+}
+
+c-program {
+    display: block;
+
+    article {
+        margin-top: var(--spacing-l);   
+    }
+
+    h3 {
+        margin-bottom: var(--spacing-xxl);
+    }
+
+    p {
+        margin-bottom: var(--spacing-l);
+    }
+
+    .video {
+        margin: var(--spacing-xxl) 0;
+    }
+}

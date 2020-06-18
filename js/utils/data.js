@@ -7,4 +7,5 @@ export default function data() {
         }
     }
     this.data = obj
+    return obj
 }

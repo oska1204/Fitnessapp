@@ -9,25 +9,18 @@
 					'Consequuntur maiores et dicta neque. Deserunt ab dolor odio. Sunt sit enim numquam nostrum aperiam corrupti et officia.',
 					'Nesciunt at quia deserunt. Illo corrupti repellendus iste. Minima quo tenetur qui. Ut quos omnis laborum ut porro. Voluptatem.',
 				],
-				program: {
-					heading: 'Ben program',
-					paragraphs: [
-						'Consequuntur maiores et dicta neque. Deserunt ab dolor odio. Sunt sit enim numquam nostrum aperiam corrupti et officia.',
-						'Nesciunt at quia deserunt. Illo corrupti repellendus iste. Minima quo tenetur qui. Ut quos omnis laborum ut porro. Voluptatem.',
-					],
-					videos: [
-						{
-							heading: 'Video',
-							paragraphs: 'Ok',
-							video: 'https://youtube.com/embed/-FlxM_0S2lA',
-						},
-						{
-							heading: 'Video',
-							paragraphs: 'Ok',
-							video: 'https://youtube.com/embed/-FlxM_0S2lA',
-						},
-					],
-				},
+				program: [
+					{
+						heading: 'Video',
+						paragraphs: ['Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident, numquam accusamus quaerat voluptates odio ex suscipit odit? Suscipit veritatis dolore, repellendus illo soluta perspiciatis pariatur rem alias corporis voluptate cumque.', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati dolorum sapiente delectus fuga repudiandae beatae hic minima mollitia voluptate, maxime esse corporis sequi possimus reiciendis. Sunt rerum nisi suscipit voluptatum!'],
+						video: 'https://youtube.com/embed/-FlxM_0S2lA',
+					},
+					{
+						heading: 'Video',
+						paragraphs: 'Ok',
+						video: 'https://youtube.com/embed/-FlxM_0S2lA',
+					},
+				],
 			},
 			{
 				heading: 'Overkrop øvelser program',
@@ -71,9 +64,9 @@ export default function fitnessPrograms() {
 		</header>
 		<div class="wrapper">
 			<main>
-				<c-main-heading data-heading="${setPath(data.main.heading)}" data-paragraphs="data.main.paragraphs">
+				<c-main-heading data-heading="${setPath(data.main.heading)}" data-paragraphs="${setPath(data.main.paragraphs)}">
 				</c-main-heading>
-				<c-fitness-programs-section data-articles="data.main.articles">
+				<c-fitness-programs-section data-articles="${setPath(data.main.articles)}">
 				</c-fitness-programs-section>
 			</main>
 		</div>

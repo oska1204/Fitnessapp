@@ -1,3 +1,50 @@
+c-create-plan {
+    display: block;
+    padding: var(--spacing-xxl) 30px;
+    width: 100%;
+}
+
+c-create-plan > input {
+    margin-bottom: var(--spacing-xxl);
+    width: 100%;
+}
+
+c-create-plan textarea {
+    margin-bottom: var(--spacing-xxl);
+    max-width: 100%;
+    min-width: 100%;
+}
+
+c-create-plan > .input-heading {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+c-create-plan .buttons {
+    display: flex;
+    justify-content: space-between;
+}
+
+c-create-plan .add-training span {
+    font-size: 1.5rem;
+    line-height: 0;
+    position: relative;
+    top: 2px;
+    margin-right: var(--spacing-s);
+}
+
+c-create-plan > article h3 {
+    margin-bottom: var(--spacing-xxl);
+}
+
+c-create-plan > article p {
+    margin-bottom: var(--spacing-xxl);
+}
+
+c-create-plan > article .video {
+    margin-bottom: var(--spacing-xxl);
+}
+
 c-fitness-programs-section article {
     margin-bottom: var(--spacing-l);
     padding: var(--spacing-m) var(--spacing-xl);
@@ -69,6 +116,38 @@ c-header .btn-toggle-theme {
     font-size: 1.5rem;
     line-height: 0.65;
     -webkit-text-stroke: 1px;
+}
+
+.program {
+    padding: var(--spacing-xxl) 30px;
+}
+
+.program > h1 {
+    margin-bottom: var(--spacing-xxl);
+}
+
+.program > p {
+    margin-bottom: var(--spacing-l);
+}
+
+c-program {
+    display: block;
+}
+
+c-program article {
+    margin-top: var(--spacing-l);
+}
+
+c-program h3 {
+    margin-bottom: var(--spacing-xxl);
+}
+
+c-program p {
+    margin-bottom: var(--spacing-l);
+}
+
+c-program .video {
+    margin: var(--spacing-xxl) 0;
 }
 
 c-videos-section .category {
@@ -163,12 +242,14 @@ input {
     font-size: 1rem;
 }
 
-input {
+input, textarea {
     color: var(--main-color);
     background: var(--third-bg-color);
     border: none;
     padding: var(--spacing-m);
     border-radius: var(--spacing-m);
+    font-family: inherit;
+    font-size: 1rem;
 }
 
 ::placeholder {
@@ -302,45 +383,4 @@ c-login input {
 c-login button {
     align-self: flex-end;
     cursor: pointer;
-}
-
-c-create-plan {
-    display: block;
-    padding: var(--spacing-xxl) 30px;
-    width: 100%;
-}
-
-c-create-plan > input {
-    margin-bottom: var(--spacing-xxl);
-    width: 100%;
-}
-
-c-create-plan > .input-heading {
-    font-size: 2rem;
-    font-weight: bold;
-}
-
-c-create-plan .buttons {
-    display: flex;
-    justify-content: space-between;
-}
-
-c-create-plan .add-training span {
-    font-size: 1.5rem;
-    line-height: 0;
-    position: relative;
-    top: 2px;
-    margin-right: var(--spacing-s);
-}
-
-c-create-plan > article h3 {
-    margin-bottom: var(--spacing-xxl);
-}
-
-c-create-plan > article p {
-    margin-bottom: var(--spacing-xxl);
-}
-
-c-create-plan > article .video {
-    margin-bottom: var(--spacing-xxl);
 }

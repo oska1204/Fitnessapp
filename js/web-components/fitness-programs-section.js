@@ -8,7 +8,7 @@ customElements.define(
         connectedCallback() {
             this.data.articles.forEach(article => {
                 this.insertAdjacentHTML('beforeend', `
-                    <article data-program="${setPath(article.program)}">
+                    <article data-program="${setPath(article)}">
                         <h3>${article.heading}</h3>
                         ${wrap`<p>${article.paragraphs}</p>`}
                     </article>
@@ -18,10 +18,16 @@ customElements.define(
             const articles = this.querySelectorAll('article')
 
             articles.forEach(article => {
-                article.addEventListener('click', ()=>{
+                article.getData()
+                const { heading, paragraphs, program } = article.data.program
+
+                article.addEventListener('click', () => {
                     document.body.insertAdjacentHTML('beforeend', `
                         <c-modal>
-                            <c-fitness-program data-program="${article.dataset.program}"></c-fitness-program>
+                            <section class="program">
+                                <c-main-heading data-heading="${setPath(heading)}" data-paragraphs="${setPath(paragraphs)}"></c-main-heading>
+                                <c-program data-program="${setPath(program)}"></c-program>
+                            </section>
                         </c-modal>
                     `)
                 })
