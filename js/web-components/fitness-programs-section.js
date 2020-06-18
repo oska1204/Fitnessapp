@@ -25,7 +25,7 @@ customElements.define(
                     document.body.insertAdjacentHTML('beforeend', `
                         <c-modal>
                             <section class="program">
-                                <c-main-heading data-heading="${setPath(heading)}" data-paragraphs="${setPath(paragraphs)}"></c-main-heading>
+                                <c-main-heading data-heading="${setPath('Umm actually no')}" data-paragraphs="${setPath('And also you')}" data-raw="${setPath({ heading, paragraphs })}"></c-main-heading>
                                 <c-program data-program="${setPath(program)}"></c-program>
                             </section>
                         </c-modal>

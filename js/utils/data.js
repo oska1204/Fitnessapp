@@ -1,6 +1,7 @@
 export default function data() {
-    const obj = {}
+    const obj = this.dataset.raw ? getPath(this.dataset.raw) : {}
     for (const item in this.dataset) {
+        if (item === 'raw') continue
         try {
             obj[item] = getPath(this.dataset[item])
         } catch (error) {

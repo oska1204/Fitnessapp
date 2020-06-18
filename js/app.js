@@ -20,10 +20,11 @@ window.temp = temp
 window.wrap = wrap
 window.wrapArr = wrapArr
 
-const loading = document.querySelector('.loading')
-if (loading) loading.style.opacity = 0
+const pathname = location.pathname
+const index = pathname.lastIndexOf('/') + 1
+const modPathname = pathname.slice(0, index)
 
-switch (location.pathname) {
+switch (modPathname) {
 	case '/fitness-programs/':
 		fitnessPrograms();
 		break;
@@ -33,6 +34,7 @@ switch (location.pathname) {
 		break;
 
 	case '/':
+	case '/index.html':
 		fitnessPrograms();
 		break;
 

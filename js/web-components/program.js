@@ -7,8 +7,8 @@ customElements.define(
 
         connectedCallback() {
 
-            this.data.program.forEach(step => {
-                const { heading, paragraphs, video } = step
+            this.data.program.forEach(article => {
+                const { heading, paragraphs, video } = article
     
                 this.insertAdjacentHTML('beforeend', `
                     <article>
