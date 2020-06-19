@@ -1,16 +1,18 @@
 customElements.define(
-    'c-program',
+    'c-video-ul',
     class extends CustomElement {
         constructor() {
             super();
         }
 
         connectedCallback() {
-            this.data.program.forEach(article => {
+            const { ul } = this.data
+
+            ul.forEach(li => {
                 this.insertAdjacentHTML('beforeend', `
-                    <c-video data-raw="${setPath(article)}"></c-video>
+                    <c-video-li data-raw="${setPath(li)}"></c-video-li>
                 `)
-            });
+            })
         }
     }
 );

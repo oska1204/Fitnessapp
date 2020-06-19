@@ -8,11 +8,11 @@ c-videos-section {
 			word-break: break-word;
 		}
 	}
+}
 
-	li {
-		display: flex;
-		margin-bottom: var(--spacing-l);
-	}
+c-video-li {
+	display: flex;
+	margin-bottom: var(--spacing-l);
 
 	.video-thumbnail {
 		display: flex;
@@ -36,5 +36,20 @@ c-videos-section {
 		p {
 			padding: var(--spacing-s) 0;
 		}
+	}
+}
+
+.videos {
+	padding: var(--spacing-xxl);
+	display: flex;
+	flex-direction: column;
+	
+	input {
+		margin-bottom: var(--spacing-xxl);
+		width: 100%;
+	}
+	
+	.btn {
+		align-self: flex-end;
 	}
 }

@@ -134,19 +134,15 @@ c-program {
     display: block;
 }
 
-c-program article {
-    margin-top: var(--spacing-l);
-}
-
-c-program h3 {
+c-video h3 {
     margin-bottom: var(--spacing-xxl);
 }
 
-c-program p {
+c-video p {
     margin-bottom: var(--spacing-l);
 }
 
-c-program .video {
+c-video .video {
     margin: var(--spacing-xxl) 0;
 }
 
@@ -160,33 +156,48 @@ c-videos-section .category > h3 {
     word-break: break-word;
 }
 
-c-videos-section li {
+c-video-li {
     display: flex;
     margin-bottom: var(--spacing-l);
 }
 
-c-videos-section .video-thumbnail {
+c-video-li .video-thumbnail {
     display: flex;
     height: 68px;
     margin-right: var(--spacing-m);
     align-self: center;
 }
 
-c-videos-section .video-thumbnail img {
+c-video-li .video-thumbnail img {
     object-fit: cover;
 }
 
-c-videos-section .info {
+c-video-li .info {
     overflow: hidden;
 }
 
-c-videos-section .info h3 {
+c-video-li .info h3 {
     padding: var(--spacing-s) 0;
     margin-top: var(--spacing-s);
 }
 
-c-videos-section .info p {
+c-video-li .info p {
     padding: var(--spacing-s) 0;
+}
+
+.videos {
+    padding: var(--spacing-xxl);
+    display: flex;
+    flex-direction: column;
+}
+
+.videos input {
+    margin-bottom: var(--spacing-xxl);
+    width: 100%;
+}
+
+.videos .btn {
+    align-self: flex-end;
 }
 
 html,

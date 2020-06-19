@@ -1,4 +1,4 @@
-import data from '/js/utils/data.js'
+import getData from '/js/utils/get-data.js'
 
 /*
 // Create CustomElement
@@ -19,11 +19,10 @@ customElements.define(
 
 // There are two ways to pass data
 // 1. Path to the data from window
-    window.path = {
-        heading: 'Heading 1'
-    }
+    const text = 'Heading 1'
+
     document.body.insertAdjacentHTML('beforeend', `
-        <c-element data-heading="path.heading"></c-element>
+        <c-element data-heading="${setPath(text)}"></c-element>
     `)
 
 // 2. Set data manually
@@ -37,7 +36,7 @@ customElements.define(
 class CustomElement extends HTMLElement {
     constructor() {
         super()
-        data.bind(this)();
+        getData.bind(this)();
     }
 
     get data() {

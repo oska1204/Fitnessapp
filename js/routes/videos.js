@@ -1,7 +1,7 @@
 const data = {
     main: {
         heading: 'Videoer',
-        paragraphs: 'Tryk på en video for at redigere den eller <a href="#">tilføj en ny video</a>',
+        paragraphs: 'Tryk på en video for at redigere den eller <a class="add-video" href="#">tilføj en ny video</a>',
         categories: [
             {
                 heading: 'Ben<a href="#">f</a>',
@@ -47,13 +47,28 @@ export default function videos() {
         </header>
         <div class="wrapper">
             <main>
-                <c-main-heading data-heading="data.main.heading" data-paragraphs="data.main.paragraphs">
+                <c-main-heading data-heading="${setPath(data.main.heading)}" data-paragraphs="${setPath(data.main.paragraphs)}">
                 </c-main-heading>
-                <c-videos-section data-categories="data.main.categories">
+                <c-videos-section data-categories="${setPath(data.main.categories)}">
                 </c-videos-section>
             </main>
         </div>
-	`;
-
+    `;
+    
     document.body.appendChild(template.content);
+    
+    const addVideo = document.querySelector('.add-video')
+
+    addVideo.addEventListener('click', function (event) {
+        document.body.insertAdjacentHTML('beforeend', `
+            <c-modal class="small">
+                <form class="videos">
+                    <input placeholder="Title">
+                    <input placeholder="Beskrivelse">
+                    <input placeholder="Video">
+                    <div class="btn">Tilføj</div>
+                </form>
+            </c-modal>
+        `)
+    })
 }
