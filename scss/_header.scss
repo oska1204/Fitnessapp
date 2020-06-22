@@ -19,7 +19,7 @@ c-header {
 	nav {
 		flex-grow: 1;
 		
-		ul {
+		c-header-ul {
 			display: flex;
 			flex-wrap: wrap;
 			justify-content: flex-end;
@@ -27,7 +27,7 @@ c-header {
 			align-items: center;
 		}
 		
-		li {
+		c-header-li {
 			display: flex;
 			margin: var(--spacing-m);
 		}

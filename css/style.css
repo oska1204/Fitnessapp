@@ -85,7 +85,7 @@ c-header nav {
     flex-grow: 1;
 }
 
-c-header nav ul {
+c-header nav c-header-ul {
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-end;
@@ -93,7 +93,7 @@ c-header nav ul {
     align-items: center;
 }
 
-c-header nav li {
+c-header nav c-header-li {
     display: flex;
     margin: var(--spacing-m);
 }
