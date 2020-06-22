@@ -4,7 +4,7 @@ import setPath from '/js/utils/set-path.js'
 import temp from '/js/utils/temp.js'
 import toggleTheme from '/js/utils/toggle-theme.js';
 import wrap from '/js/utils/wrap.js'
-import wrapArr from '/js/utils/wrapArr.js'
+import wrapArr from '/js/utils/wrap-arr.js'
 
 HTMLElement.prototype.getData = getData
 
