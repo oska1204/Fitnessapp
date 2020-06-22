@@ -8,6 +8,8 @@ customElements.define(
         connectedCallback() {
             const self = this
             
+            window.overflow = window.overflow || 0
+            window.overflow++
             document.documentElement.style.overflow = 'hidden'
     
             const template = temp(this)
@@ -23,7 +25,8 @@ customElements.define(
                 const confirmed = self.getAttribute('data-confirm') ? confirm(self.dataset.confirm) : true
                 if (confirmed) {
                     self.remove()
-                    document.documentElement.style.overflow = ''
+                    window.overflow--
+                    if(!window.overflow) document.documentElement.style.overflow = ''
                 }
             }
     
