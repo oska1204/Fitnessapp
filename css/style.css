@@ -118,6 +118,65 @@ c-header .btn-toggle-theme {
     -webkit-text-stroke: 1px;
 }
 
+c-main-heading > h1 {
+    padding: var(--spacing-xl) 0;
+    word-break: break-word;
+}
+
+c-main-heading > p {
+    padding: var(--spacing-m) 0;
+}
+
+c-main-heading > p:last-of-type {
+    margin-bottom: var(--spacing-xxl);
+}
+
+c-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    overflow-y: auto;
+    background-color: rgba(0, 0, 0, 0.27);
+    display: flex;
+}
+
+c-modal.small > .modal-wrapper {
+    max-width: 768px;
+}
+
+c-modal > .modal-wrapper {
+    margin: auto;
+    background-color: var(--main-bg-color);
+    border: 2px solid var(--main-color);
+    width: 100%;
+    max-width: 1024px;
+    position: relative;
+}
+
+c-modal > .modal-wrapper > .exit-btn {
+    position: absolute;
+    top: var(--spacing-m);
+    right: var(--spacing-m);
+    background-color: var(--secondary-bg-color);
+    border: 2px solid;
+    border-radius: 50%;
+    width: 3.5rem;
+    height: 3.5rem;
+    line-height: 0.82;
+    text-align: center;
+    font-size: 3.2rem;
+    letter-spacing: -1px;
+    cursor: default;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.25);
+}
+
+c-modal .content {
+    display: block;
+    padding: var(--spacing-xxl);
+}
+
 .program {
     padding: var(--spacing-xxl) 30px;
 }
@@ -200,6 +259,10 @@ c-video-li .info p {
     align-self: flex-end;
 }
 
+html {
+    font-size: 10px;
+}
+
 html,
 body {
     height: 100%;
@@ -209,6 +272,7 @@ body {
     font-family: Arial, Helvetica, sans-serif;
     color: var(--main-color);
     background-color: var(--main-bg-color);
+    font-size: 16px;
 }
 
 * {
@@ -224,11 +288,11 @@ body {
     --secondary-bg-color: #ddd;
     --third-color: #666;
     --third-bg-color: #bbb;
-    --spacing-s: 0.25rem;
-    --spacing-m: 0.5rem;
-    --spacing-l: 0.75rem;
-    --spacing-xl: 1rem;
-    --spacing-xxl: 1.25rem;
+    --spacing-s: 0.5rem;
+    --spacing-m: 1rem;
+    --spacing-l: 1.5rem;
+    --spacing-xl: 2rem;
+    --spacing-xxl: 2.5rem;
 }
 
 :root.dark-theme {
@@ -250,7 +314,7 @@ p {
 
 button,
 input {
-    font-size: 1rem;
+    font-size: 1em;
 }
 
 input, textarea {
@@ -260,7 +324,7 @@ input, textarea {
     padding: var(--spacing-m);
     border-radius: var(--spacing-m);
     font-family: inherit;
-    font-size: 1rem;
+    font-size: 1em;
 }
 
 ::placeholder {
@@ -271,7 +335,7 @@ button,
 .btn {
     padding: var(--spacing-s) var(--spacing-m);
     border: 2px solid;
-    border-radius: 0.5rem;
+    border-radius: var(--spacing-m);
     text-decoration: none;
     color: var(--secondary-color);
     background-color: var(--secondary-bg-color);
@@ -305,93 +369,4 @@ main {
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
-}
-
-c-main-heading > h1 {
-    padding: var(--spacing-xl) 0;
-    word-break: break-word;
-}
-
-c-main-heading > p {
-    padding: var(--spacing-m) 0;
-}
-
-c-main-heading > p:last-of-type {
-    margin-bottom: var(--spacing-xxl);
-}
-
-c-modal {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    overflow-y: auto;
-    background-color: rgba(0, 0, 0, 0.27);
-    display: flex;
-}
-
-c-modal.small > .modal-wrapper {
-    max-width: 768px;
-}
-
-c-modal > .modal-wrapper {
-    margin: auto;
-    background-color: var(--main-bg-color);
-    border: 2px solid var(--main-color);
-    width: 100%;
-    max-width: 1024px;
-    position: relative;
-}
-
-c-modal > .modal-wrapper > .exit-btn {
-    position: absolute;
-    top: var(--spacing-m);
-    right: var(--spacing-m);
-    background-color: var(--secondary-bg-color);
-    border: 2px solid;
-    border-radius: 50%;
-    width: 2.2rem;
-    height: 2.2rem;
-    line-height: 0.82;
-    text-align: center;
-    font-size: 2rem;
-    letter-spacing: -1px;
-    cursor: default;
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.25);
-}
-
-c-modal .content {
-    display: block;
-    padding: var(--spacing-xxl);
-}
-
-c-login {
-    display: flex;
-    height: 100%;
-}
-
-c-login .content {
-    margin: auto;
-}
-
-c-login form {
-    padding: var(--spacing-xxl);
-    border: 2px solid;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-}
-
-c-login h1 {
-    margin-bottom: var(--spacing-xxl);
-}
-
-c-login input {
-    margin-bottom: var(--spacing-xl);
-}
-
-c-login button {
-    align-self: flex-end;
-    cursor: pointer;
 }
