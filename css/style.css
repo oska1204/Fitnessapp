@@ -118,6 +118,46 @@ c-header .btn-toggle-theme {
     -webkit-text-stroke: 1px;
 }
 
+c-header .btn-toggle-nav {
+    position: relative;
+    display: none;
+}
+
+c-header .btn-toggle-nav a {
+    color: transparent;
+}
+
+c-header .btn-toggle-nav a > div {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+c-header .btn-toggle-nav .line {
+    width: 2.5rem;
+    height: 0.3rem;
+    border-radius: 7rem;
+    margin: 0.7rem 0;
+    background: var(--secondary-color);
+}
+
+@media screen and (max-width: 767px) {
+    c-header .btn-toggle-nav {
+        display: flex;
+    }
+    c-header .btn-toggle-nav ~ c-header-li {
+        display: none;
+    }
+    c-header .toggled ~ c-header-li {
+        display: flex;
+    }
+}
+
 c-main-heading > h1 {
     padding: var(--spacing-xl) 0;
     word-break: break-word;
@@ -334,7 +374,7 @@ input, textarea {
 button,
 .btn {
     padding: var(--spacing-s) var(--spacing-m);
-    border: 2px solid;
+    border: 2px solid var(--secondary-color);
     border-radius: var(--spacing-m);
     text-decoration: none;
     color: var(--secondary-color);

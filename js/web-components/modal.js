@@ -4,14 +4,12 @@ customElements.define(
         constructor() {
             super()
         }
-        
+
         connectedCallback() {
             const self = this
-            
-            window.overflow = window.overflow || 0
-            window.overflow++
+
             document.documentElement.style.overflow = 'hidden'
-    
+
             const template = temp(this)
             this.innerHTML = `
                 <div class="modal-wrapper">
@@ -20,25 +18,33 @@ customElements.define(
             `
             const modalWrapper = this.querySelector('.modal-wrapper')
             modalWrapper.appendChild(template.content)
-    
-            const close = function () {
+
+            const close = function (modal = self) {
                 const confirmed = self.getAttribute('data-confirm') ? confirm(self.dataset.confirm) : true
                 if (confirmed) {
-                    self.remove()
-                    window.overflow--
-                    if(!window.overflow) document.documentElement.style.overflow = ''
+                    modal.remove()
+                    if (!document.querySelector('c-modal'))
+                        document.documentElement.style.overflow = ''
                 }
             }
-    
+
             this.addEventListener('click', function (event) {
                 if (this === event.target)
                     close()
             })
-    
+
             const exitBtn = this.querySelector('.exit-btn')
             exitBtn.addEventListener('click', function (event) {
                 close()
-            })            
+            })
+
+            document.removeEventListener('keydown', window.escapeModal)
+            window.escapeModal = function (e) {
+                const modal = document.querySelector('c-modal:last-of-type')
+                if (e.code === 'Escape' && modal)
+                    close(modal)
+            }
+            document.addEventListener('keydown', window.escapeModal)
         }
     }
 )

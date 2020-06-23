@@ -81,7 +81,7 @@ input, textarea {
 button,
 .btn {
 	padding: var(--spacing-s) var(--spacing-m);
-	border: 2px solid;
+	border: 2px solid var(--secondary-color);
 	border-radius: var(--spacing-m);
 	text-decoration: none;
 	color: var(--secondary-color);
