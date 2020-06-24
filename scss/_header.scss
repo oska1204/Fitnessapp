@@ -4,12 +4,11 @@ c-header {
 	justify-content: space-between;
 	align-items: center;
 	border: 2px solid;
-	padding: var(--spacing-m);
 
 	h2 {
 		word-break: break-word;
 		place-self: start;
-		margin: var(--spacing-l) var(--spacing-m) var(--spacing-m);
+		margin: var(--spacing-xl) var(--spacing-l) var(--spacing-m);
 
 		a {
 			text-decoration: none;
@@ -18,6 +17,7 @@ c-header {
 
 	nav {
 		flex-grow: 1;
+		margin: 0 var(--spacing-m);
 
 		c-header-ul {
 			display: flex;
@@ -53,45 +53,57 @@ c-header {
 		-webkit-text-stroke: 1px;
 	}
 
-	.btn-toggle-nav {
-		position: relative;
+	.nav-toggle {
 		display: none;
-		
-		a {
-			color: transparent;
-		}
+		width: 5rem;
+		margin: 1rem;
+		cursor: pointer;
+	}
 
-		a > div {
-			position: absolute;
-			top: 0;
-			left: 0;
-			width: 100%;
-			height: 100%;
-			display: flex;
-			align-items: center;
-			justify-content: center;
-		}
+	.nav-toggle [type='checkbox'] {
+		display: none;
+	}
 
-		.line {
-			width: 2.5rem;
-			height: 0.3rem;
-			border-radius: 7rem;
-			margin: 0.7rem 0;
-			background: var(--secondary-color);
-		}
+	.line {
+		background: var(--secondary-color);
+		height: 0.7rem;
+		border-radius: 1rem;
+		margin: 0.7rem 0.4rem;
 	}
 
 	@media screen and (max-width: 767px) {
-		.btn-toggle-nav {
-			display: flex;
+		.nav-toggle {
+			display: block;
 		}
 
-		.btn-toggle-nav ~ c-header-li {
+		nav {
 			display: none;
 		}
 
-		.toggled ~ c-header-li {
-			display: flex;
+		.checked ~ nav {
+			display: block;
+			width: 100%;
+			margin: 0;
+
+			c-header-ul {
+				flex-direction: column;
+			}
+
+			c-header-li {
+				margin: 0;
+				width: 100%;
+
+				&:nth-of-type(odd) {
+					background: var(--secondary-bg-color);
+				}
+
+				a {
+					width: 100%;
+					border: none;
+					border-radius: 0;
+					background-color: unset;
+				}
+			}
 		}
 	}
 }

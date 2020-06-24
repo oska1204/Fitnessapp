@@ -68,13 +68,12 @@ c-header {
     justify-content: space-between;
     align-items: center;
     border: 2px solid;
-    padding: var(--spacing-m);
 }
 
 c-header h2 {
     word-break: break-word;
     place-self: start;
-    margin: var(--spacing-l) var(--spacing-m) var(--spacing-m);
+    margin: var(--spacing-xl) var(--spacing-l) var(--spacing-m);
 }
 
 c-header h2 a {
@@ -83,6 +82,7 @@ c-header h2 a {
 
 c-header nav {
     flex-grow: 1;
+    margin: 0 var(--spacing-m);
 }
 
 c-header nav c-header-ul {
@@ -118,44 +118,82 @@ c-header .btn-toggle-theme {
     -webkit-text-stroke: 1px;
 }
 
-c-header .btn-toggle-nav {
-    position: relative;
+c-header .nav-toggle {
+    display: none;
+    width: 5rem;
+    margin: 1rem;
+    cursor: pointer;
+}
+
+c-header .nav-toggle [type='checkbox'] {
     display: none;
 }
 
-c-header .btn-toggle-nav a {
-    color: transparent;
-}
-
-c-header .btn-toggle-nav a > div {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-c-header .btn-toggle-nav .line {
-    width: 2.5rem;
-    height: 0.3rem;
-    border-radius: 7rem;
-    margin: 0.7rem 0;
+c-header .line {
     background: var(--secondary-color);
+    height: 0.7rem;
+    border-radius: 1rem;
+    margin: 0.7rem 0.4rem;
 }
 
 @media screen and (max-width: 767px) {
-    c-header .btn-toggle-nav {
-        display: flex;
+    c-header .nav-toggle {
+        display: block;
     }
-    c-header .btn-toggle-nav ~ c-header-li {
+    c-header nav {
         display: none;
     }
-    c-header .toggled ~ c-header-li {
-        display: flex;
+    c-header .checked ~ nav {
+        display: block;
+        width: 100%;
+        margin: 0;
     }
+    c-header .checked ~ nav c-header-ul {
+        flex-direction: column;
+    }
+    c-header .checked ~ nav c-header-li {
+        margin: 0;
+        width: 100%;
+    }
+    c-header .checked ~ nav c-header-li:nth-of-type(odd) {
+        background: var(--secondary-bg-color);
+    }
+    c-header .checked ~ nav c-header-li a {
+        width: 100%;
+        border: none;
+        border-radius: 0;
+        background-color: unset;
+    }
+}
+
+c-login {
+    display: flex;
+    height: 100%;
+}
+
+c-login .content {
+    margin: auto;
+}
+
+c-login form {
+    padding: var(--spacing-xxl);
+    border: 2px solid;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+
+c-login h1 {
+    margin-bottom: var(--spacing-xxl);
+}
+
+c-login input {
+    margin-bottom: var(--spacing-xl);
+}
+
+c-login button {
+    align-self: flex-end;
+    cursor: pointer;
 }
 
 c-main-heading > h1 {

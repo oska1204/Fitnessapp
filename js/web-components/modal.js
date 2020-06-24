@@ -20,7 +20,7 @@ customElements.define(
             modalWrapper.appendChild(template.content)
 
             const close = function (modal = self) {
-                const confirmed = self.getAttribute('data-confirm') ? confirm(self.dataset.confirm) : true
+                const confirmed = modal.getAttribute('data-confirm') ? confirm(modal.dataset.confirm) : true
                 if (confirmed) {
                     modal.remove()
                     if (!document.querySelector('c-modal'))
