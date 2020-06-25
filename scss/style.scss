@@ -30,25 +30,44 @@ body {
 }
 
 :root {
-	--main-color: #333;
-	--main-bg-color: #eee;
-	--secondary-color: #222;
-	--secondary-bg-color: #ddd;
-	--third-color: #666;
-	--third-bg-color: #bbb;
 	--spacing-s: 0.5rem;
 	--spacing-m: 1rem;
 	--spacing-l: 1.5rem;
 	--spacing-xl: 2rem;
 	--spacing-xxl: 2.5rem;
 
-	&.dark-theme {
+	@mixin light-theme {
+		--main-color: #333;
+		--main-bg-color: #eee;
+		--secondary-color: #222;
+		--secondary-bg-color: #ddd;
+		--third-color: #666;
+		--third-bg-color: #bbb;
+	}
+
+	@mixin dark-theme {
 		--main-color: #ccc;
 		--main-bg-color: #111;
 		--secondary-color: #ddd;
 		--secondary-bg-color: #222;
 		--third-color: #999;
 		--third-bg-color: #333;
+	}
+
+	@media (prefers-color-scheme: light) {
+		@include light-theme;
+	}
+
+	@media (prefers-color-scheme: dark) {
+		@include dark-theme;
+	}
+
+	&.light-theme {
+		@include light-theme;
+	}
+
+	&.dark-theme {
+		@include dark-theme;
 	}
 }
 
@@ -66,7 +85,8 @@ textarea {
 	font-size: 1em;
 }
 
-input, textarea {
+input,
+textarea {
 	color: var(--main-color);
 	background: var(--third-bg-color);
 	border: none;
