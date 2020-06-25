@@ -378,17 +378,6 @@ body {
     --third-bg-color: #bbb;
 }
 
-@media (prefers-color-scheme: light) {
-    :root {
-        --main-color: #333;
-        --main-bg-color: #eee;
-        --secondary-color: #222;
-        --secondary-bg-color: #ddd;
-        --third-color: #666;
-        --third-bg-color: #bbb;
-    }
-}
-
 @media (prefers-color-scheme: dark) {
     :root {
         --main-color: #ccc;
