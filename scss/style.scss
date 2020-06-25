@@ -61,6 +61,8 @@ body {
 	@media (prefers-color-scheme: dark) {
 		@include dark-theme;
 	}
+	
+	@include light-theme;
 
 	&.light-theme {
 		@include light-theme;

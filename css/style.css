@@ -130,7 +130,7 @@ c-header .nav-toggle [type='checkbox'] {
 }
 
 c-header .line {
-    background: var(--secondary-color);
+    background: var(--main-color);
     height: 0.7rem;
     border-radius: 1rem;
     margin: 0.7rem 0.4rem;
@@ -370,6 +370,12 @@ body {
     --spacing-l: 1.5rem;
     --spacing-xl: 2rem;
     --spacing-xxl: 2.5rem;
+    --main-color: #333;
+    --main-bg-color: #eee;
+    --secondary-color: #222;
+    --secondary-bg-color: #ddd;
+    --third-color: #666;
+    --third-bg-color: #bbb;
 }
 
 @media (prefers-color-scheme: light) {
