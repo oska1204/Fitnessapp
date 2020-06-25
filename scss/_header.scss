@@ -87,21 +87,17 @@ c-header {
 
 			c-header-ul {
 				flex-direction: column;
+				padding: 0 var(--spacing-m) var(--spacing-s);
 			}
 
 			c-header-li {
-				margin: 0;
+				margin: 0 0 var(--spacing-m);
 				width: 100%;
-
-				&:nth-of-type(odd) {
-					background: var(--secondary-bg-color);
-				}
 
 				a {
 					width: 100%;
-					border: none;
-					border-radius: 0;
-					background-color: unset;
+					padding: var(--spacing-l) var(--spacing-xl);
+					border-radius: 9000px;
 				}
 			}
 		}

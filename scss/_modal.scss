@@ -21,20 +21,28 @@ c-modal {
 		position: relative;
 
 		> .exit-btn {
-			position: absolute;
-			top: var(--spacing-m);
-			right: var(--spacing-m);
-			background-color: var(--secondary-bg-color);
-			border: 2px solid;
-			border-radius: 50%;
-			width: 3.5rem;
-			height: 3.5rem;
-			line-height: 0.82;
-			text-align: center;
-			font-size: 3.2rem;
-			letter-spacing: -1px;
-			cursor: default;
-			box-shadow: 0 5px 10px rgba(0, 0, 0, 0.25);
+			width: 100%;
+			max-width: inherit;
+			z-index: 100;
+			position: fixed;
+
+			span {
+				position: absolute;
+				margin-right: 17px;
+				top: var(--spacing-m);
+				right: var(--spacing-m);
+				background-color: var(--secondary-bg-color);
+				border: 2px solid;
+				border-radius: 50%;
+				width: 3.5rem;
+				height: 3.5rem;
+				line-height: 0.82;
+				text-align: center;
+				font-size: 3.2rem;
+				letter-spacing: -1px;
+				cursor: default;
+				box-shadow: 0 5px 10px rgba(0, 0, 0, 0.25);
+			}
 		}
 	}
 	

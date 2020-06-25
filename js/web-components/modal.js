@@ -13,7 +13,9 @@ customElements.define(
             const template = temp(this)
             this.innerHTML = `
                 <div class="modal-wrapper">
-                    <span class="exit-btn">x</span>
+                    <div class="exit-btn">
+                        <span>x</span>
+                    </div>
                 </div>
             `
             const modalWrapper = this.querySelector('.modal-wrapper')

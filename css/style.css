@@ -150,19 +150,16 @@ c-header .line {
     }
     c-header .checked ~ nav c-header-ul {
         flex-direction: column;
+        padding: 0 var(--spacing-m) var(--spacing-s);
     }
     c-header .checked ~ nav c-header-li {
-        margin: 0;
+        margin: 0 0 var(--spacing-m);
         width: 100%;
-    }
-    c-header .checked ~ nav c-header-li:nth-of-type(odd) {
-        background: var(--secondary-bg-color);
     }
     c-header .checked ~ nav c-header-li a {
         width: 100%;
-        border: none;
-        border-radius: 0;
-        background-color: unset;
+        padding: var(--spacing-l) var(--spacing-xl);
+        border-radius: 9000px;
     }
 }
 
@@ -234,7 +231,15 @@ c-modal > .modal-wrapper {
 }
 
 c-modal > .modal-wrapper > .exit-btn {
+    width: 100%;
+    max-width: inherit;
+    z-index: 100;
+    position: fixed;
+}
+
+c-modal > .modal-wrapper > .exit-btn span {
     position: absolute;
+    margin-right: 17px;
     top: var(--spacing-m);
     right: var(--spacing-m);
     background-color: var(--secondary-bg-color);
