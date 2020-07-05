@@ -53,15 +53,10 @@ c-header {
 		-webkit-text-stroke: 1px;
 	}
 
-	.nav-toggle {
-		display: none;
+	> label {
 		width: 5rem;
 		margin: 1rem;
 		cursor: pointer;
-	}
-
-	.nav-toggle [type='checkbox'] {
-		display: none;
 	}
 
 	.line {
@@ -69,6 +64,10 @@ c-header {
 		height: 0.7rem;
 		border-radius: 1rem;
 		margin: 0.7rem 0.4rem;
+	}
+
+	#nav-toggle {
+		display: none;
 	}
 
 	@media screen and (max-width: 767px) {
@@ -80,7 +79,7 @@ c-header {
 			display: none;
 		}
 
-		.checked ~ nav {
+		#nav-toggle:checked ~ nav {
 			display: block;
 			width: 100%;
 			margin: 0;

@@ -27,33 +27,17 @@ customElements.define(
 
 			this.innerHTML = `
 				<h1><a href="/">Fitnessapp</a></h1>
-				<label class="nav-toggle">
-					<input type="checkbox">
+				<label for="nav-toggle">
 					<div class="line"></div>
 					<div class="line"></div>
 					<div class="line"></div>
 				</label>
+				<input type="checkbox" id="nav-toggle">
 				<nav>
 					<c-header-ul data-links="${setPath(links)}">
 					</c-header-ul>
 				</nav>
 			`;
-
-			
-			const navToggle = this.querySelector('.nav-toggle')
-			const checkbox = this.querySelector('.nav-toggle [type=checkbox]')
-
-			checkbox.addEventListener('change', function (event) {
-				switch (event.target.checked) {
-					case true:
-						navToggle.classList.add('checked')						
-						break;
-
-					case false:
-						navToggle.classList.remove('checked')	
-						break;
-				}
-			})
 		}
 	}
 );

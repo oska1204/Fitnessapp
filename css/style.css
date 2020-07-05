@@ -118,15 +118,10 @@ c-header .btn-toggle-theme {
     -webkit-text-stroke: 1px;
 }
 
-c-header .nav-toggle {
-    display: none;
+c-header > label {
     width: 5rem;
     margin: 1rem;
     cursor: pointer;
-}
-
-c-header .nav-toggle [type='checkbox'] {
-    display: none;
 }
 
 c-header .line {
@@ -136,6 +131,10 @@ c-header .line {
     margin: 0.7rem 0.4rem;
 }
 
+c-header #nav-toggle {
+    display: none;
+}
+
 @media screen and (max-width: 767px) {
     c-header .nav-toggle {
         display: block;
@@ -143,20 +142,20 @@ c-header .line {
     c-header nav {
         display: none;
     }
-    c-header .checked ~ nav {
+    c-header #nav-toggle:checked ~ nav {
         display: block;
         width: 100%;
         margin: 0;
     }
-    c-header .checked ~ nav c-header-ul {
+    c-header #nav-toggle:checked ~ nav c-header-ul {
         flex-direction: column;
         padding: 0 var(--spacing-m) var(--spacing-s);
     }
-    c-header .checked ~ nav c-header-li {
+    c-header #nav-toggle:checked ~ nav c-header-li {
         margin: 0 0 var(--spacing-m);
         width: 100%;
     }
-    c-header .checked ~ nav c-header-li a {
+    c-header #nav-toggle:checked ~ nav c-header-li a {
         width: 100%;
         padding: var(--spacing-l) var(--spacing-xl);
         border-radius: 9000px;
