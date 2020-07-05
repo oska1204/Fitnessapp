@@ -55,7 +55,7 @@ customElements.define(
                 document.body.insertAdjacentHTML('beforeend', `
                     <c-modal class="small">
                         <div class="content">
-                            <h2>Videoer</h2>
+                            <h1>Videoer</h1>
                             <c-videos-section data-categories="data.categories"></c-videos-section>
                         </div>
                     </c-modal>

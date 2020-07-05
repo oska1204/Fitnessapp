@@ -70,13 +70,13 @@ c-header {
     border: 2px solid;
 }
 
-c-header h2 {
+c-header h1 {
     word-break: break-word;
     place-self: start;
     margin: var(--spacing-xl) var(--spacing-l) var(--spacing-m);
 }
 
-c-header h2 a {
+c-header h1 a {
     text-decoration: none;
 }
 
@@ -180,7 +180,7 @@ c-login form {
     flex-direction: column;
 }
 
-c-login h1 {
+c-login h2 {
     margin-bottom: var(--spacing-xxl);
 }
 
@@ -193,7 +193,7 @@ c-login button {
     cursor: pointer;
 }
 
-c-main-heading > h1 {
+c-main-heading > h2 {
     padding: var(--spacing-xl) 0;
     word-break: break-word;
 }
@@ -264,7 +264,7 @@ c-modal .content {
     padding: var(--spacing-xxl) 30px;
 }
 
-.program > h1 {
+.program > h2 {
     margin-bottom: var(--spacing-xxl);
 }
 
@@ -405,6 +405,24 @@ body {
     --secondary-bg-color: #222;
     --third-color: #999;
     --third-bg-color: #333;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: "Merriweather", serif;
+    letter-spacing: 0.0625em;
+}
+
+h1 {
+    font-size: 1.5em;
+}
+
+h2 {
+    font-size: 2em;
 }
 
 a {

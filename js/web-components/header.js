@@ -26,7 +26,7 @@ customElements.define(
 			]
 
 			this.innerHTML = `
-				<h2><a href="/">Fitnessapp</a></h2>
+				<h1><a href="/">Fitnessapp</a></h1>
 				<label class="nav-toggle">
 					<input type="checkbox">
 					<div class="line"></div>

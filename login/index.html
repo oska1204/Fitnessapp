@@ -8,8 +8,17 @@
     <link rel="stylesheet" href="/css/style.css">
     <script>
         // ensures fast load of essentials
-        if (localStorage.getItem('darkTheme') === 'true')
-            document.documentElement.classList.add('dark-theme');
+        const classList = document.documentElement.classList
+        const isDark = JSON.parse(localStorage.getItem('darkTheme'))
+        switch (isDark) {
+            case true:
+                classList.add('dark-theme')
+                break;
+
+            case false:
+                classList.add('light-theme')
+                break;
+        }
         window.addEventListener('load', function () {
             if (!window.customElements)
                 document.body.insertAdjacentHTML('beforeend', '\
@@ -21,6 +30,7 @@
         })
     </script>
     <script type="module" src="/js/app.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather&display=swap" rel="stylesheet">
 </head>
 
 <body>

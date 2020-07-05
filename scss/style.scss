@@ -1,11 +1,11 @@
-@import 'create-plan';
-@import 'fitness-programs';
-@import 'header';
-@import 'login';
-@import 'main-heading';
-@import 'modal';
-@import 'program';
-@import 'videos';
+@import "create-plan";
+@import "fitness-programs";
+@import "header";
+@import "login";
+@import "main-heading";
+@import "modal";
+@import "program";
+@import "videos";
 
 html {
 	font-size: 10px;
@@ -67,6 +67,23 @@ body {
 	&.dark-theme {
 		@include dark-theme;
 	}
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-family: "Merriweather", serif;
+	letter-spacing: 0.0625em;
+}
+
+h1 {
+	font-size: 1.5em;
+}
+
+h2 {
+	font-size: 2em;
 }
 
 a {

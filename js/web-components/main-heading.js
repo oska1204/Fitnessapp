@@ -9,7 +9,7 @@ customElements.define(
 			const { heading, paragraphs } = this.data
 
 			this.innerHTML = `
-				<h1>${heading}</h1>
+				<h2>${heading}</h2>
 				${wrap`<p>${paragraphs}</p>`}
 			`
 		}
