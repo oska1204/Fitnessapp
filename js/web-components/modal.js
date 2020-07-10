@@ -14,7 +14,7 @@ customElements.define(
             this.innerHTML = `
                 <div class="modal-wrapper">
                     <div class="exit-btn">
-                        <span>x</span>
+                        <div>x</div>
                     </div>
                 </div>
             `

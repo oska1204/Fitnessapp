@@ -24,13 +24,13 @@ c-modal {
 			width: 100%;
 			max-width: inherit;
 			z-index: 100;
-			position: fixed;
+			position: sticky;
+			top: 2px;
 
-			span {
+			div {
 				position: absolute;
-				margin-right: 21px;
-				top: var(--spacing-m);
-				right: var(--spacing-m);
+				top: var(--spacing-l);
+				right: var(--spacing-l);
 				background-color: var(--secondary-bg-color);
 				border: 2px solid;
 				border-radius: 50%;
