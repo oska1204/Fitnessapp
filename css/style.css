@@ -119,6 +119,7 @@ c-header .btn-toggle-theme {
 }
 
 c-header > label {
+    display: none;
     width: 5rem;
     margin: 1rem;
     cursor: pointer;
@@ -136,7 +137,7 @@ c-header #nav-toggle {
 }
 
 @media screen and (max-width: 767px) {
-    c-header .nav-toggle {
+    c-header > label {
         display: block;
     }
     c-header nav {

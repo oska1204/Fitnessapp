@@ -54,6 +54,7 @@ c-header {
 	}
 
 	> label {
+		display: none;
 		width: 5rem;
 		margin: 1rem;
 		cursor: pointer;
@@ -71,7 +72,7 @@ c-header {
 	}
 
 	@media screen and (max-width: 767px) {
-		.nav-toggle {
+		> label {
 			display: block;
 		}
 
