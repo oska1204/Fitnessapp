@@ -122,6 +122,10 @@ button,
 	text-decoration: none;
 	color: var(--secondary-color);
 	background-color: var(--secondary-bg-color);
+
+	&:hover {
+		background-color: var(--third-bg-color);
+	}
 }
 
 .wrapper {

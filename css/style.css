@@ -463,6 +463,11 @@ button,
     background-color: var(--secondary-bg-color);
 }
 
+button:hover,
+.btn:hover {
+    background-color: var(--third-bg-color);
+}
+
 .wrapper {
     max-width: 960px;
     margin: 0 auto;
