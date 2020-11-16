@@ -6,7 +6,7 @@ customElements.define(
         }
 
         connectedCallback() {
-            this.tempUpdate()
+            if (this.data.categories) this.tempUpdate()
         }
 
         tempUpdate() {

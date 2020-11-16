@@ -2,6 +2,13 @@ import '/js/utils/custom-element.js'
 import '/js/utils/utils.js'
 import '/js/utils/web-components.js'
 
+fetch('/basic-html/head.html')
+    .then(e => e.text())
+    .then(e => document.head.insertAdjacentHTML('afterbegin', e))
+fetch('/basic-html/body.html')
+    .then(e => e.text())
+    .then(e => document.body.insertAdjacentHTML('afterbegin', e))
+
 const classList = document.documentElement.classList
 const isDark = JSON.parse(localStorage.getItem('darkTheme'))
 switch (isDark) {
