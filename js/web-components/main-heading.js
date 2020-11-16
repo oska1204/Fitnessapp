@@ -5,7 +5,7 @@ customElements.define(
 			super();
 		}
 
-		connectedCallback() {
+		tempUpdate() {
 			const { heading, paragraphs } = this.data
 
 			this.innerHTML = `

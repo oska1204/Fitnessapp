@@ -5,7 +5,7 @@ customElements.define(
             super();
         }
 
-        connectedCallback() {
+        tempUpdate() {
             this.data.articles.forEach(article => {
                 this.insertAdjacentHTML('beforeend', `
                     <article data-program="${setPath(article)}">

@@ -1,3 +1,5 @@
+import '/js/main.js'
+
 const data = {
     main: {
         heading: 'Videoer',
@@ -35,28 +37,20 @@ const data = {
     },
 }
 
-export default function videos() {
+{
     window.data = data
-    
-    const template = document.createElement('template');
-    // Visual Studio Code: Ctrl K + M --> HTML
-    // Visual Studio Code: Ctrl K + M --> Javascript
-    template.innerHTML = `
-        <header>
-            <c-header></c-header>
-        </header>
-        <div class="wrapper">
-            <main>
-                <c-main-heading data-heading="${setPath(data.main.heading)}" data-paragraphs="${setPath(data.main.paragraphs)}">
-                </c-main-heading>
-                <c-videos-section data-categories="${setPath(data.main.categories)}">
-                </c-videos-section>
-            </main>
-        </div>
-    `;
-    
-    document.body.appendChild(template.content);
-    
+
+    const mainHeading = document.querySelector('c-main-heading')
+    const videosSection = document.querySelector('c-videos-section')
+
+    mainHeading.data.heading = data.main.heading
+    mainHeading.data.paragraphs = data.main.paragraphs
+
+    videosSection.data.categories = data.main.categories
+
+    mainHeading.tempUpdate()
+    videosSection.tempUpdate()
+
     const addVideo = document.querySelector('.add-video')
 
     addVideo.addEventListener('click', function (event) {

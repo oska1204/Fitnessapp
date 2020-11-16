@@ -6,8 +6,12 @@ customElements.define(
         }
 
         connectedCallback() {
+            this.tempUpdate()
+        }
+
+        tempUpdate() {
             const { categories } = this.data
-            
+
             categories.forEach(category => {
                 this.insertAdjacentHTML('beforeend', `
                     <div class="category">
@@ -15,7 +19,7 @@ customElements.define(
                         <c-video-ul data-ul="${setPath(category.ul)}"></c-video-ul>
                     </div>
                 `);
-            });            
+            });
         }
     }
 );

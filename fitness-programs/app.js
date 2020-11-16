@@ -1,3 +1,5 @@
+import '/js/main.js'
+
 /*test*/ const data = {
 	main: {
 		heading: 'Træningsprogram',
@@ -51,28 +53,18 @@
 };
 
 
-export default function fitnessPrograms() {
+{
 	window.data = data
 
-	const template = document.createElement('template');
-	// Visual Studio Code: Ctrl K + M --> HTML
-	// Visual Studio Code: Ctrl K + M --> JavaScript
+	const mainHeading = document.querySelector('c-main-heading')
+	const fitnessProgramsSection = document.querySelector('c-fitness-programs-section')
 
-	template.innerHTML = `
-		<header>
-			<c-header></c-header>
-		</header>
-		<div class="wrapper">
-			<main>
-				<c-main-heading data-heading="${setPath(data.main.heading)}" data-paragraphs="${setPath(data.main.paragraphs)}">
-				</c-main-heading>
-				<c-fitness-programs-section data-articles="${setPath(data.main.articles)}">
-				</c-fitness-programs-section>
-			</main>
-		</div>
-	`;
+	mainHeading.data.heading = data.main.heading
+	mainHeading.data.paragraphs = data.main.paragraphs
+	fitnessProgramsSection.data.articles = data.main.articles
 
-	document.body.appendChild(template.content);
+	mainHeading.tempUpdate()
+	fitnessProgramsSection.tempUpdate()
 
 	const createPlan = document.querySelector('.create-plan')
 	createPlan.addEventListener('click', function (event) {
