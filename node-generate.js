@@ -1,4 +1,7 @@
-// Generates /js/utils/web-components.js that links to all the web-components in the /js/web-components folder
+// This file is only made for convenience.
+// Meaning you don't have to manually add the web-components to the web-components file.
+
+// Generates /js/utils/web-components.js that links to all the web-components in the /js/web-components folder.
 
 // If you have node installed, open the console and run this:
 // node node-generate.js
