@@ -2,6 +2,7 @@ import '/js/utils/custom-element.js'
 import '/js/utils/web-key.js'
 import '/js/utils/utils.js'
 import '/js/utils/web-components.js'
+import '/js/utils/temp-web-components.js'
 
 fetch('/basic-html/head.html')
     .then(e => e.text())

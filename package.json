@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "scss": "node-sass --output-style expanded --indent-width 4 --watch scss -o css"
+    "scss": "node-sass --output-style expanded --indent-width 4 --watch scss -o css",
+    "scsss": "node-sass --output-style expanded --indent-width 4 --watch js -o js"
   },
   "author": "",
   "license": "ISC",

@@ -16,18 +16,16 @@ function getFiles(dir, files_) {
         if (fs.statSync(name).isDirectory()) {
             getFiles(name, files_);
         } else {
-            if (name.match(/\.js$/))
+            if (name.match(/script\.js$/))
                 files_.push(name);
         }
     }
     return files_;
 }
 
-const file = getFiles('./js/web-components').map(e => `import '${e.slice(1)}'`).join('\n')
+const file = getFiles('./js/temp-web-components').map(e => `import '${e.slice(1)}'`).join('\n')
 
-fs.writeFile('./js/utils/web-components.js', file, err => {
-    if (err === null)
-        console.log('success')
-    else
+fs.writeFile('./js/utils/temp-web-components.js', file, err => {
+    if (err !== null)
         console.error(err)
 })
