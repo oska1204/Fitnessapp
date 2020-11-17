@@ -1,4 +1,5 @@
 import '/js/utils/custom-element.js'
+import '/js/utils/web-key.js'
 import '/js/utils/utils.js'
 import '/js/utils/web-components.js'
 
