@@ -1,3 +1,3 @@
 import '/js/main.js'
 
-location = 'fitness-programs'
+location = 'fitness-programs copy'
