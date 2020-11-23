@@ -1,0 +1,48 @@
+nav {
+	flex-grow: 1;
+	margin: 0 var(--spacing-m);
+}
+
+label {
+	display: none;
+	width: 5rem;
+	margin: 1rem;
+	cursor: pointer;
+}
+
+#nav-toggle {
+	display: none;
+}
+
+.line {
+    background: var(--main-color);
+    height: 0.7rem;
+    border-radius: 1rem;
+    margin: 0.7rem 0.4rem;
+}
+
+@media screen and (max-width: 767px) {
+	label {
+		display: block;
+    }
+    
+	nav {
+		display: none;
+    }
+    
+	#nav-toggle:checked ~ nav {
+		display: block;
+		width: 100%;
+		margin: 0;
+    }
+    
+    ul {
+        flex-direction: column;
+        padding: 0 var(--spacing-m) var(--spacing-s);
+    }
+
+    header-a {
+        margin: 0 0 var(--spacing-m);
+        width: 100%;
+    }
+}

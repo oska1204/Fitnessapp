@@ -1,0 +1,9 @@
+h1 {
+    word-break: break-word;
+    place-self: start;
+    margin: var(--spacing-xl) var(--spacing-l) var(--spacing-m);
+}
+
+h1 a {
+    text-decoration: none;
+}

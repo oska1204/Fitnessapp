@@ -1,1 +1,5 @@
-import '/js/temp-web-components/create-plan/script.js'
+import '/js/temp-web-components/Header/header-/script.js'
+import '/js/temp-web-components/Header/header-button/script.js'
+import '/js/temp-web-components/Header/header-heading/script.js'
+import '/js/temp-web-components/Header/header-nav/script.js'
+import '/js/temp-web-components/template-/script.js'

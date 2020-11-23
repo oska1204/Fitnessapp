@@ -57,9 +57,9 @@ const init = async elm => {
     }
     if (templates[path].isFetched === 0) {
         templates[path].isFetched = 1
-        templates[path].innerHTML += `<link rel="stylesheet" href="${path}style.css">`
         templates[path].innerHTML += await fetch(`${path}template.html`)
             .then(e => e.text())
+        templates[path].innerHTML += `<link rel="stylesheet" href="${path}style.css">`
         templates[path].isFetched = 2
         templates[path].dispatchEvent(new CustomEvent('fetched'))
     }
