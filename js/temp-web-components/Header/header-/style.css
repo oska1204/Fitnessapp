@@ -5,3 +5,27 @@
 	align-items: center;
 	border: 2px solid;
 }
+
+header-heading {
+	place-self: start;
+}
+
+header-nav-toggle {
+	display: none;
+}
+
+
+@media screen and (max-width: 767px) {
+	header-nav-toggle {
+		display: block;
+	}
+
+	header-nav {
+		display: none;
+		width: 100%;
+	}
+
+	header-nav-toggle[checked] ~ header-nav {
+		display: block;
+	}
+}

@@ -3,26 +3,39 @@ customElements.define('header-nav', class extends WebKey {
         super()
         this.elms = {}
     }
-    
+
     contentLoaded() {
+        this.elms.ul = this.shadowRoot.querySelector('ul')
+        this.elms.liTemplate = this.shadowRoot.querySelector('template[li]')
     }
 
     contentRemoved() {
     }
 
     static get observedAttributes() {
-        return ['blank']
+        return ['links']
     }
 
-    get blank() {
-        return this.data.blank
+    get links() {
+        return this.data.links
     }
 
-    set blank(value) {
-        this.data.blank = value
+    set links(value) {
+        this.data.links = value
         return true
     }
 
-    render_blank() {
+    render_links() {
+        this.links.forEach(obj => {
+            const { text, href } = obj
+            if (this.shadowRoot.querySelector(`[text="${text}"][href="${href}"]`))
+                return
+            const li = document.createElement('li')
+            const btn = document.createElement('header-button')
+            btn.href = href
+            btn.text = text
+            li.appendChild(btn)
+            this.elms.ul.lastElementChild.before(li)            
+        });
     }
 })

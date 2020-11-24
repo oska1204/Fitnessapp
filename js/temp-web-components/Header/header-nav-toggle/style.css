@@ -1,0 +1,21 @@
+.wrapper {
+	display: flex;
+}
+
+label {
+	display: block;
+	width: 5rem;
+	margin: 1rem;
+	cursor: pointer;
+}
+
+#nav-toggle {
+	display: none;
+}
+
+.line {
+	background: var(--main-color);
+	height: 0.7rem;
+	border-radius: 1rem;
+	margin: 0.7rem 0.4rem;
+}

@@ -5,7 +5,7 @@ customElements.define('header-button', class extends WebKey {
     }
     
     contentLoaded() {
-        this.elms.a = document.querySelector('a')
+        this.elms.a = this.shadowRoot.querySelector('a')
     }
 
     contentRemoved() {

@@ -3,46 +3,43 @@ nav {
 	margin: 0 var(--spacing-m);
 }
 
-label {
-	display: none;
-	width: 5rem;
-	margin: 1rem;
-	cursor: pointer;
+ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    list-style: none;
+    align-items: center;
 }
 
-#nav-toggle {
-	display: none;
-}
-
-.line {
-    background: var(--main-color);
-    height: 0.7rem;
-    border-radius: 1rem;
-    margin: 0.7rem 0.4rem;
+li {
+    display: flex;
+    margin: var(--spacing-m);
 }
 
 @media screen and (max-width: 767px) {
 	label {
 		display: block;
     }
-    
+        
 	nav {
-		display: none;
-    }
-    
-	#nav-toggle:checked ~ nav {
 		display: block;
 		width: 100%;
 		margin: 0;
     }
-    
+
     ul {
         flex-direction: column;
         padding: 0 var(--spacing-m) var(--spacing-s);
     }
 
-    header-a {
+    li {
         margin: 0 0 var(--spacing-m);
         width: 100%;
+    }
+
+    header-button, header-toggle-theme {
+        width: 100%;
+        --padding: var(--spacing-l) var(--spacing-xl);
+        --border-radius: 9000px;
     }
 }

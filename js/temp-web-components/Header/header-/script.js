@@ -2,28 +2,48 @@ customElements.define('header-', class extends WebKey {
     constructor() {
         super()
         this.elms = {}
+        this.links = [
+            {
+                "href": "/fitness-programs",
+                "text": "Træningsprogram"
+            },
+            {
+                "href": "/videos",
+                "text": "Videoer"
+            },
+            {
+                "href": "#",
+                "text": "Brugere"
+            },
+            {
+                "href": "/login",
+                "text": "login"
+            }
+        ]
     }
-    
+
     contentLoaded() {
+        this.elms.nav = this.shadowRoot.querySelector('header-nav')
     }
 
     contentRemoved() {
     }
 
     static get observedAttributes() {
-        return []
+        return ['links']
     }
 
-    get blank() {
-        return this.data.blank
+    get links() {
+        return this.data.links
     }
 
-    set blank(value) {
-        this.data.blank = value
+    set links(value) {
+        this.data.links = value
         return true
     }
 
-    render_blank() {
+    render_links() {
+        this.elms.nav.links = this.links
     }
 })
 
