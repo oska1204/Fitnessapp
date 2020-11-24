@@ -43,6 +43,7 @@ const templates = {}
 
 const init = async elm => {
     const path = getPath()
+    elm.dirname = path
     if (!templates[path]) {
         templates[path] = document.createElement('template')
         templates[path].isFetched = 0
@@ -50,16 +51,18 @@ const init = async elm => {
     elm.attachShadow({ mode: 'open' })
     const initContent = () => {
         elm.shadowRoot.appendChild(templates[path].content.cloneNode(true))
-        elm.isContentLoaded = true
-        elm.removeEventListener('fetched', initContent)
-        elm.dispatchEvent(new CustomEvent('content-loaded'))
-        elm.updateFrontEnd()
+        setTimeout(() => {
+            elm.removeEventListener('fetched', initContent)
+            elm.isContentLoaded = true
+            elm.dispatchEvent(new CustomEvent('content-loaded'))
+            elm.updateFrontEnd()
+        })
     }
     if (templates[path].isFetched === 0) {
         templates[path].isFetched = 1
+        templates[path].innerHTML += `<link rel="stylesheet" href="${path}style.css">`
         templates[path].innerHTML += await fetch(`${path}template.html`)
             .then(e => e.text())
-        templates[path].innerHTML += `<link rel="stylesheet" href="${path}style.css">`
         templates[path].isFetched = 2
         templates[path].dispatchEvent(new CustomEvent('fetched'))
     }
@@ -117,7 +120,6 @@ window.WebKey = class WebKey extends HTMLElement {
     updateFrontEnd() {
         for (const prop in this.data) {
             if (this.data.hasOwnProperty(prop)) {
-                const value = this.data[prop]
                 this.renderProp(prop)
             }
         }

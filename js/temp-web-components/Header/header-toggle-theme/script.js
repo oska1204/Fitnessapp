@@ -3,22 +3,17 @@ customElements.define('header-toggle-theme', class extends WebKey {
         super()
         this.elms = {}
     }
-    
+
     contentLoaded() {
-        this.addEventListener('click', toggleTheme);
+        this.setEventListener(this, 'click', toggleTheme);
         this.elms.btn = this.shadowRoot.querySelector('header-button')
-        console.log(this.elms.btn.shadowRoot)
-        const style = document.createElement('style')
-        style.innerHTML = `
-            .wrapper a {
-                user-select: none;
-                cursor: pointer;
-                font-size: 1.5em;
-                line-height: 0.65;
-                -webkit-text-stroke: 1px;
-            }
-        `
-        this.elms.btn.shadowRoot.append(style)
+        const style = document.createElement('template')
+        style.innerHTML = `<link rel="stylesheet" href="${this.dirname}inject.css">`
+        const  appendStyle = () => this.elms.btn.shadowRoot.firstElementChild.after(style.content)
+        if (this.elms.btn.isContentLoaded)
+            appendStyle()
+        else
+            this.setEventListener(this.elms.btn, 'content-loaded', () => appendStyle())
     }
 
     contentRemoved() {
