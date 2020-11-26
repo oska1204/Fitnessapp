@@ -49,14 +49,13 @@ const init = async elm => {
         templates[path].isFetched = 0
     }
     elm.attachShadow({ mode: 'open' })
-    const initContent = () => {
-        elm.shadowRoot.appendChild(templates[path].content.cloneNode(true))
-        setTimeout(() => {
-            elm.removeEventListener('fetched', initContent)
-            elm.isContentLoaded = true
-            elm.dispatchEvent(new CustomEvent('content-loaded'))
-            elm.updateFrontEnd()
-        })
+    const initContent = async () => {
+        await elm.shadowRoot.appendChild(templates[path].content.cloneNode(true))
+        elm.removeEventListener('fetched', initContent)
+        elm.isContentLoaded = true
+        elm.dispatchEvent(new CustomEvent('content-loaded'))
+        elm.updateFrontEnd()
+
     }
     if (templates[path].isFetched === 0) {
         templates[path].isFetched = 1
