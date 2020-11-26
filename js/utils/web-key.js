@@ -44,10 +44,6 @@ const templates = {}
 const init = async elm => {
     const path = getPath()
     elm.dirname = path
-    if (!templates[path]) {
-        templates[path] = document.createElement('template')
-        templates[path].isFetched = 0
-    }
     elm.attachShadow({ mode: 'open' })
     const initContent = async () => {
         await elm.shadowRoot.appendChild(templates[path].content.cloneNode(true))
@@ -55,9 +51,10 @@ const init = async elm => {
         elm.isContentLoaded = true
         elm.dispatchEvent(new CustomEvent('content-loaded'))
         elm.updateFrontEnd()
-
+        
     }
-    if (templates[path].isFetched === 0) {
+    if (!templates[path]) {
+        templates[path] = document.createElement('template')
         templates[path].isFetched = 1
         templates[path].innerHTML += `<link rel="stylesheet" href="${path}style.css">`
         templates[path].innerHTML += await fetch(`${path}template.html`)
