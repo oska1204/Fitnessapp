@@ -1,4 +1,4 @@
-import '/js/main.js'
+import '/src/js/main.js'
 
 /*test*/ const data = {
 	main: {

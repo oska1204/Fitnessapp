@@ -1,3 +1,3 @@
-import '/js/main.js'
+import '/src/js/main.js'
 
 location = 'fitness-programs copy'

@@ -1,4 +1,4 @@
-import getData from '/js/utils/get-data.js'
+import getData from '/src/js/utils/get-data.js'
 
 /*
 // Create CustomElement
