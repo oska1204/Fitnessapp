@@ -4,13 +4,6 @@ import './utils/utils.js'
 import './utils/web-components.js'
 import './utils/temp-web-components.js'
 
-fetch('/basic-html/head.html')
-    .then(e => e.text())
-    .then(e => document.head.insertAdjacentHTML('afterbegin', e))
-fetch('/basic-html/body.html')
-    .then(e => e.text())
-    .then(e => document.body.insertAdjacentHTML('afterbegin', e))
-
 const classList = document.documentElement.classList
 const isDark = JSON.parse(localStorage.getItem('darkTheme'))
 switch (isDark) {

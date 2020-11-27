@@ -364,6 +364,10 @@ body {
     margin: 0;
 }
 
+.noscript {
+    margin: 8px;
+}
+
 :root {
     --spacing-s: 0.5rem;
     --spacing-m: 1rem;
@@ -468,7 +472,7 @@ button:hover,
     background-color: var(--third-bg-color);
 }
 
-.wrapper {
+.content-wrapper {
     max-width: 960px;
     margin: 0 auto;
 }
