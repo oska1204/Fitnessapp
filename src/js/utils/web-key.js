@@ -1,34 +1,4 @@
-/* Basic component
-customElements.define('item-', class extends WebKey {
-    constructor() {
-        super()
-    }
-    
-    contentLoaded() {
-    }
-
-    contentRemoved() {
-    }
-
-    static get observedAttributes() {
-        return ['text']
-    }
-
-    get text() {
-        return this.data.text
-    }
-
-    set text(value) {
-        this.data.text = value
-        return true
-    }
-
-    render_text() {
-        this.shadowRoot.innerHTML = this.data.text
-    }
-})
-*/
-
+// See "template-" folder for template
 export default (() => {
     const getPath = () => {
         return new Error()
@@ -51,7 +21,6 @@ export default (() => {
             elm.isContentLoaded = true
             elm.dispatchEvent(new CustomEvent('content-loaded'))
             elm.updateFrontEnd()
-
         }
         if (!templates[path]) {
             templates[path] = document.createElement('template')
