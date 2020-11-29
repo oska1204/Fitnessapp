@@ -1,6 +1,6 @@
 customElements.define('header-button', class extends WebKey {
     constructor() {
-        super()
+        super('text', 'href')
         this.elms = {}
     }
     
@@ -15,26 +15,8 @@ customElements.define('header-button', class extends WebKey {
         return ['text', 'href']
     }
 
-    get text() {
-        return this.data.text
-    }
-
-    set text(value) {
-        this.data.text = value
-        return true
-    }
-
     render_text() {
         this.elms.a.innerHTML = this.text
-    }
-
-    get href() {
-        return this.data.href
-    }
-
-    set href(value) {
-        this.data.href = value
-        return true
     }
 
     render_href() {

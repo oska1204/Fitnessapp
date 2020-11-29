@@ -38,9 +38,8 @@ export default (() => {
             initContent()
         }
     }
-
     window.WebKey = class WebKey extends HTMLElement {
-        constructor(props = []) {
+        constructor(...props) {
             super()
             this.defaultProps(...props)
             this.isContentLoaded = false
@@ -59,11 +58,15 @@ export default (() => {
 
         defaultProps(...props) {
             props.forEach(prop => {
-                Object.defineProperty(this.__proto__, prop, {
-                    get: () => {
+                Object.defineProperty(this, prop, {
+                    get:() => {
+                        if (typeof this[`get_${prop}`] === 'function')
+                            return this[`get_${prop}`](this.data[prop])
                         return this.data[prop]
                     },
                     set: (value) => {
+                        if (typeof this[`set_${prop}`] === 'function')
+                            value = this[`set_${prop}`](value)
                         this.data[prop] = value
                         return true
                     },

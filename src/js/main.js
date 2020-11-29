@@ -5,7 +5,10 @@ import './utils/web-components.js'
 import './utils/temp-web-components.js'
 
 const classList = document.documentElement.classList
-const isDark = JSON.parse(localStorage.getItem('darkTheme'))
+let isDark
+try {
+    isDark = JSON.parse(localStorage.getItem('darkTheme'))
+} catch {}
 switch (isDark) {
     case true:
         classList.add('dark-theme')

@@ -1,6 +1,6 @@
 customElements.define('header-nav', class extends WebKey {
     constructor() {
-        super()
+        super('links')
         this.elms = {}
     }
 
@@ -14,15 +14,6 @@ customElements.define('header-nav', class extends WebKey {
 
     static get observedAttributes() {
         return ['links']
-    }
-
-    get links() {
-        return this.data.links
-    }
-
-    set links(value) {
-        this.data.links = value
-        return true
     }
 
     render_links() {

@@ -472,7 +472,7 @@ button:hover,
     background-color: var(--third-bg-color);
 }
 
-.content-wrapper {
+.wrapper {
     max-width: 960px;
     margin: 0 auto;
 }
