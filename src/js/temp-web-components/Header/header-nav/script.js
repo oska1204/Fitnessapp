@@ -26,7 +26,7 @@ customElements.define('header-nav', class extends WebKey {
             btn.href = href
             btn.text = text
             li.appendChild(btn)
-            this.elms.ul.lastElementChild.before(li)            
+            this.elms.ul.lastElementChild.before(li)
         });
     }
 })

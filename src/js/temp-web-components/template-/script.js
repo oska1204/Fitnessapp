@@ -3,7 +3,7 @@ customElements.define('template-', class extends WebKey {
         super('blank')
         this.elms = {}
     }
-    
+
     contentLoaded() {
     }
 

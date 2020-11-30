@@ -3,7 +3,7 @@ customElements.define('header-heading', class extends WebKey {
         super('text', 'href')
         this.elms = {}
     }
-    
+
     contentLoaded() {
         this.elms.a = this.shadowRoot.querySelector('a')
     }

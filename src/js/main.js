@@ -8,7 +8,7 @@ const classList = document.documentElement.classList
 let isDark
 try {
     isDark = JSON.parse(localStorage.getItem('darkTheme'))
-} catch {}
+} catch { }
 switch (isDark) {
     case true:
         classList.add('dark-theme')

@@ -38,6 +38,7 @@ export default (() => {
             initContent()
         }
     }
+
     window.WebKey = class WebKey extends HTMLElement {
         constructor(...props) {
             super()
