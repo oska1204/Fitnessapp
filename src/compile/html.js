@@ -17,7 +17,7 @@ function getFiles(dir, files_) {
     return files_;
 }
 
-const base = fs.readFileSync('./src/compile/base.html', 'utf8', console.log)
+const base = fs.readFileSync('./src/html/base.html', 'utf8', console.log)
 
 const object = getFiles('.')
 for (const key in object) {
