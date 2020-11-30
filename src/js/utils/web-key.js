@@ -59,15 +59,18 @@ export default (() => {
         defaultProps(...props) {
             props.forEach(prop => {
                 Object.defineProperty(this, prop, {
-                    get:() => {
-                        if (typeof this[`get_${prop}`] === 'function')
-                            return this[`get_${prop}`](this.data[prop])
+                    get: () => {
+                        const name = `get_${prop}`
+                        if (typeof this[name] === 'function')
+                            return this[name](this.data[prop])
                         return this.data[prop]
                     },
                     set: (value) => {
-                        if (typeof this[`set_${prop}`] === 'function')
-                            value = this[`set_${prop}`](value)
-                        this.data[prop] = value
+                        const name = `set_${prop}`
+                        if (typeof this[name] === 'function')
+                            this.data[prop] = this[name](value)
+                        else
+                            this.data[prop] = value
                         return true
                     },
                     enumerable: true,
