@@ -1,2 +1,2 @@
-require('./src/compile/web-components')
-require('./src/compile/html')
+require('./public/src/compile/web-components')
+require('./public/src/compile/html')

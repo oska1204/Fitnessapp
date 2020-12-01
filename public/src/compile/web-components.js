@@ -23,9 +23,9 @@ function getFiles(dir, files_) {
     return files_;
 }
 
-const file = getFiles('./src/web-components').map(e => `import '${e.slice(1)}'`).join('\n')
+const file = getFiles('./public/src/web-components').map(e => `import '${e.replace(/.\/public/, '')}'`).join('\n')
 
-fs.writeFile('./src/js/utils/temp-web-components.js', file, err => {
+fs.writeFile('./public/src/js/utils/temp-web-components.js', file, err => {
     if (err !== null)
         console.error(err)
 })

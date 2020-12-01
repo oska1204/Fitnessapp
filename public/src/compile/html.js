@@ -17,7 +17,7 @@ function getFiles(dir, files_) {
     return files_;
 }
 
-const base = fs.readFileSync('./src/html/base.html', 'utf8', console.log)
+const base = fs.readFileSync('./public/src/html/base.html', 'utf8', console.log)
 
 const object = getFiles('.')
 for (const key in object) {
@@ -30,7 +30,10 @@ for (const key in object) {
             file = file.replace('<!--$$${' + part + '}$$$-->', html)
         })
         const path = arr[0].match(/.*(?=(body|head)\.html)/)[0]
-        fs.writeFile(`${path}index.html`, file, err => {
+        fs.mkdir(`public${path.slice(1)}`, { recursive: true }, (err) => {
+            if (err) throw err;
+        });
+        fs.writeFile(`public${path.slice(1)}index.html`, file, err => {
             if (err !== null)
                 console.error(err)
         })
