@@ -9,9 +9,6 @@ customElements.define('header-nav', class extends WebKey {
         this.elms.liTemplate = this.shadowRoot.querySelector('template[li]')
     }
 
-    contentRemoved() {
-    }
-
     static get observedAttributes() {
         return ['links']
     }

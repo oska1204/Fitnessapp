@@ -16,11 +16,4 @@ customElements.define('header-nav-toggle', class extends WebKey {
             }
         )
     }
-
-    contentRemoved() {
-    }
-
-    static get observedAttributes() {
-        return []
-    }
 })

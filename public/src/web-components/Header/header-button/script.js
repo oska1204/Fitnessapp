@@ -8,9 +8,6 @@ customElements.define('header-button', class extends WebKey {
         this.elms.a = this.shadowRoot.querySelector('a')
     }
 
-    contentRemoved() {
-    }
-
     static get observedAttributes() {
         return ['text', 'href']
     }
