@@ -20,4 +20,3 @@ customElements.define('header-heading', class extends WebKey {
         this.elms.a.href = this.href
     }
 })
-

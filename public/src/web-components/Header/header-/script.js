@@ -16,4 +16,3 @@ customElements.define('header-', class extends WebKey {
         this.elms.nav.links = this.links
     }
 })
-
