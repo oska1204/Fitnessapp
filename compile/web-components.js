@@ -23,9 +23,16 @@ function getFiles(dir, files_) {
     return files_;
 }
 
-const file = getFiles('./public/src/web-components').map(e => `import '${e.replace(/.\/public/, '')}'`).join('\n')
+const file = getFiles('./public/src/web-components')
+const importFile = file.map(e => `import '${e.replace(/.\/public/, '')}'`).join('\n')
+const outputFile = file.map(e => e.replace(/script\.js$/, 'template.html'))
 
-fs.writeFile('./public/src/js/utils/temp-web-components.js', file, err => {
+fs.writeFileSync('./public/src/js/utils/temp-web-components.js', importFile, err => {
+    if (err !== null)
+        console.error(err)
+})
+
+fs.writeFileSync('compile/output/template.json', JSON.stringify(outputFile, undefined, 4), err => {
     if (err !== null)
         console.error(err)
 })

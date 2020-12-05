@@ -1,0 +1,54 @@
+<header-heading text="Fitnessapp" href="/">
+    <h1><a></a></h1>
+</header-heading>
+<header-nav-toggle>
+    <label for="nav-toggle">
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+    </label>
+    <input type="checkbox" id="nav-toggle">
+</header-nav-toggle>
+<header-nav>
+    <nav>
+        <ul>
+            <li>
+                <header-button href="/fitness-programs" text="Træningsprogram">
+                    <a>
+                        <slot name="text"></slot>
+                    </a>
+                </header-button>
+            </li>
+            <li>
+                <header-button href="/videos" text="Videoer">
+                    <a>
+                        <slot name="text"></slot>
+                    </a>
+                </header-button>
+            </li>
+            <li>
+                <header-button href="#" text="Brugere">
+                    <a>
+                        <slot name="text"></slot>
+                    </a>
+                </header-button>
+            </li>
+            <li>
+                <header-button href="/login" text="login">
+                    <a>
+                        <slot name="text"></slot>
+                    </a>
+                </header-button>
+            </li>
+            <li>
+                <header-toggle-theme>
+                    <header-button>
+                        <a>
+                            <slot name="text"></slot>
+                        </a>
+                    </header-button>
+                </header-toggle-theme>
+            </li>
+        </ul>
+    </nav>
+</header-nav>

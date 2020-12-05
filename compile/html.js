@@ -1,4 +1,5 @@
 const fs = require('fs')
+const { html: beautify_html } = require('js-beautify');
 
 function getFiles(dir, files_) {
     files_ = files_ || {};
@@ -20,19 +21,27 @@ function getFiles(dir, files_) {
 const base = fs.readFileSync('./compile/html/base.html', 'utf8', console.log)
 
 const object = getFiles('.')
-for (const key in object) {
-    if (object.hasOwnProperty(key)) {
-        const arr = object[key]
+
+const dirs = []
+
+for (const dir in object) {
+    if (object.hasOwnProperty(dir)) {
+        const arr = object[dir]
         let file = base
         arr.forEach(path => {
-            const html = fs.readFileSync(path, 'utf8', console.log)
+            const html = fs.readFileSync(path, 'utf8')
             const part = path.match(/(body|head)\.html$/)[1]
             file = file.replace('<!--$$${' + part + '}$$$-->', html)
         })
-        const path = arr[0].match(/.*(?=(body|head)\.html)/)[0]
-        fs.writeFile(`./${path.slice(1)}index.html`, file, err => {
+        fs.writeFileSync(`${dir}/index.html`, beautify_html(file), err => {
             if (err !== null)
                 console.error(err)
         })
+        dirs.push(`${dir}/index.html`)
     }
 }
+
+fs.writeFileSync(`compile/output/index.json`, JSON.stringify(dirs, undefined, 4), err => {
+    if (err !== null)
+        console.error(err)
+})
