@@ -6,6 +6,7 @@ customElements.define('header-button', class extends WebKey {
 
     contentLoaded() {
         this.elms.a = this.shadowRoot.querySelector('a')
+        this.elms.slot = this.shadowRoot.querySelector('slot')
     }
 
     static get observedAttributes() {
@@ -13,10 +14,12 @@ customElements.define('header-button', class extends WebKey {
     }
 
     render_text() {
-        this.elms.a.innerHTML = this.text
+        const { slot } = this.elms
+        slot.innerHTML = this.text
     }
 
     render_href() {
-        this.elms.a.href = this.href
+        const { a } = this.elms
+        a.href = this.href
     }
 })
