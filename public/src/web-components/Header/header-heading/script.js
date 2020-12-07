@@ -1,7 +1,6 @@
 customElements.define('header-heading', class extends WebKey {
     constructor() {
-        super('text', 'href')
-        this.elms = {}
+        super('href')
     }
 
     contentLoaded() {
@@ -9,14 +8,11 @@ customElements.define('header-heading', class extends WebKey {
     }
 
     static get observedAttributes() {
-        return ['text', 'href']
-    }
-
-    render_text() {
-        this.elms.a.innerHTML = this.text
+        return ['href']
     }
 
     render_href() {
-        this.elms.a.href = this.href
+        const { a } = this.elms
+        a.href = this.href
     }
 })
