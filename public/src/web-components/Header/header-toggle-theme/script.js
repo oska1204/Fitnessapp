@@ -4,6 +4,9 @@ customElements.define('header-toggle-theme', class extends WebKey {
     }
 
     contentLoaded() {
-        this.setEventListener(this, 'click', toggleTheme);
+        const {
+            setEventListener,
+        } = this
+        setEventListener(this, 'click', toggleTheme);
     }
 })

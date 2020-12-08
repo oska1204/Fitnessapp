@@ -4,7 +4,13 @@ customElements.define('header-button', class extends WebKey {
     }
 
     contentLoaded() {
-        this.elms.a = this.shadowRoot.querySelector('a')
+        const {
+            addElms,
+            query,
+        } = this
+        addElms({
+            a: query('a'),
+        })
     }
 
     static get observedAttributes() {

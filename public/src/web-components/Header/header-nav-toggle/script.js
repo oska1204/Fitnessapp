@@ -4,9 +4,16 @@ customElements.define('header-nav-toggle', class extends WebKey {
     }
 
     contentLoaded() {
-        this.elms.navToggle = this.shadowRoot.querySelector('#nav-toggle')
+        const {
+            addElms,
+            query,
+            setEventListener,
+        } = this
+        addElms({
+            navToggle: query('#nav-toggle')
+        })
         const { navToggle } = this.elms
-        this.setEventListener(
+        setEventListener(
             navToggle,
             'change',
             () => {
