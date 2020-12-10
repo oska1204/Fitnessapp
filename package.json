@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "scss": "node-sass --output-style expanded --indent-width 4 --watch compile/scss -o public/src/css",
+    "html": "nodemon compile/all.js --ignore compile/ --watch head.html --watch body.html",
     "compile": "node compile/all"
   },
   "author": "",
