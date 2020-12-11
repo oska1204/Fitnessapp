@@ -37,7 +37,8 @@ textarea {
 }
 
 input,
-textarea {
+textarea,
+select {
     color: var(--main-color);
     background: var(--third-bg-color);
     border: none;
@@ -63,4 +64,17 @@ button,
 button:hover,
 .btn:hover {
     background-color: var(--third-bg-color);
+}
+
+.main-heading > h2 {
+    padding: var(--spacing-xl) 0;
+    word-break: break-word;
+}
+
+.main-heading > p {
+    padding: var(--spacing-m) 0;
+}
+
+.main-heading > p:last-of-type {
+    margin-bottom: var(--spacing-xxl);
 }

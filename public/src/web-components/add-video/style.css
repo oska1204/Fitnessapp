@@ -1,0 +1,30 @@
+form {
+    padding: var(--spacing-xxl);
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-bottom: var(--spacing-xxl);
+}
+
+input,
+textarea,
+select {
+    margin-top: var(--spacing-s);
+}
+
+input,
+textarea {
+    width: 100%;
+}
+
+textarea {
+    min-width: 100%;
+    max-width: 100%;
+}
+
+.btn {
+    width: fit-content;
+    align-self: flex-end;
+}
