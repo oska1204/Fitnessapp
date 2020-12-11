@@ -33,10 +33,7 @@ for (const dir in object) {
             const part = path.match(/(body|head)\.html$/)[1]
             file = file.replace('<!--$$${' + part + '}$$$-->', html)
         })
-        fs.writeFileSync(`${dir}/index.html`, beautify_html(file), err => {
-            if (err !== null)
-                console.error(err)
-        })
+        fs.writeFileSync(`${dir}/index.html`, beautify_html(file, { "end_with_newline": true }))
         dirs.push(`${dir}/index.html`)
     }
 }
