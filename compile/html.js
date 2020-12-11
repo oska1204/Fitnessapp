@@ -18,7 +18,7 @@ function getFiles(dir, files_) {
     return files_;
 }
 
-const base = fs.readFileSync('./compile/html/base.html', 'utf8', console.log)
+const base = fs.readFileSync('./compile/html/base.html', 'utf8')
 
 const object = getFiles('.')
 
@@ -40,8 +40,3 @@ for (const dir in object) {
         dirs.push(`${dir}/index.html`)
     }
 }
-
-fs.writeFileSync(`compile/output/index.json`, JSON.stringify(dirs, undefined, 4), err => {
-    if (err !== null)
-        console.error(err)
-})

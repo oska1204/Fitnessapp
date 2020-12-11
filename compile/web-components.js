@@ -13,7 +13,7 @@ function getFiles(dir, files_) {
     var files = fs.readdirSync(dir);
     for (var i in files) {
         var name = dir + '/' + files[i];
-        if (fs.statSync(name).isDirectory()) {
+        if (fs.statSync(name).isDirectory() && !name.match(/\/template-$/)) {
             getFiles(name, files_);
         } else {
             if (name.match(/script\.js$/))
@@ -25,8 +25,5 @@ function getFiles(dir, files_) {
 
 const file = getFiles('./public/src/web-components')
 const importFile = file.map(e => `import '${e.replace(/.\/public/, '')}'`).join('\n')
-const outputFile = file.map(e => e.replace(/script\.js$/, 'template.html'))
 
 fs.writeFileSync('./public/src/js/utils/temp-web-components.js', importFile)
-
-fs.writeFileSync('./compile/output/template.json', JSON.stringify(outputFile, undefined, 4))

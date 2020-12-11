@@ -1,9 +1,0 @@
-[
-    "./public/src/web-components/Header/header-/template.html",
-    "./public/src/web-components/Header/header-button/template.html",
-    "./public/src/web-components/Header/header-heading/template.html",
-    "./public/src/web-components/Header/header-nav/template.html",
-    "./public/src/web-components/Header/header-nav-toggle/template.html",
-    "./public/src/web-components/Header/header-toggle-theme/template.html",
-    "./public/src/web-components/template-/template.html"
-]
