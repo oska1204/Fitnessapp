@@ -24,9 +24,9 @@ export default (() => {
         if (!templates[path]) {
             templates[path] = document.createElement('template')
             templates[path].isFetched = 1
-            templates[path].innerHTML += `<link rel="stylesheet" href="${path}style.css">`
             templates[path].innerHTML += await fetch(`${path}template.html`)
                 .then(e => e.text())
+            templates[path].content.querySelector('*:not(link):not(style):not(script)').insertAdjacentHTML('beforebegin', `<link rel="stylesheet" href="${path}style.css">`)
             templates[path].isFetched = 2
             templates[path].dispatchEvent(new CustomEvent('fetched'))
         }
@@ -37,7 +37,7 @@ export default (() => {
             initContent()
         }
     }
-    
+
     window.WebKey = class WebKey extends HTMLElement {
         constructor(...props) {
             super()
