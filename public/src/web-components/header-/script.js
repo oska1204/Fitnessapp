@@ -4,31 +4,26 @@ customElements.define('header-', class extends WebKey {
     }
 
     contentLoaded() {
-        const {
-            addElms,
-            query,
-            setEventListener,
-        } = this
+        const sr = this.shadowRoot
 
-        addElms({
-            btnToggleTheme: query('.btn-toggle-theme'),
-            logOut: query('.log-out'),
-        })
+        const btnToggleTheme = sr.querySelector('.btn-toggle-theme')
+        const logOut = sr.querySelector('.log-out')
 
-        const {
+        Object.assign(this.elms, {
             btnToggleTheme,
             logOut,
-        } = this.elms
-
-        setEventListener(btnToggleTheme, 'click', toggleTheme)
-
-        setEventListener(logOut, 'click', (e) => {
-            firebase.auth().signOut().then(function () {
-                // Sign-out successful.
-                location = '/log-in'
-            }).catch(function (error) {
-                // An error happened.
-            });
         })
+
+        btnToggleTheme.addEventListener('click', toggleTheme)
+        logOut.addEventListener('click', this.logOutFn)
+    }
+
+    logOutFn = (event) => {
+        firebase.auth().signOut().then(function () {
+            // Sign-out successful.
+            location = '/log-in'
+        }).catch(function (error) {
+            // An error happened.
+        });
     }
 })

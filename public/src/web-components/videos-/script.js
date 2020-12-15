@@ -4,26 +4,23 @@ customElements.define('videos-', class extends WebKey {
     }
 
     contentLoaded() {
-        const {
-            addElms,
-            query,
-            setEventListener,
-        } = this
+        const sr = this.shadowRoot
 
-        addElms({
-            addVideo: query('.add-video'),
-        })
+        const addVideo = sr.querySelector('.add-video')
 
-        const {
+        Object.assign(this.elms, {
             addVideo,
-        } = this.elms
-
-        setEventListener(addVideo, 'click', (event) => {
-            document.body.insertAdjacentHTML('beforeend', `
-                <modal- class="small">
-                    <add-video></add-video>
-                </modal->
-            `)
         })
+
+        addVideo.addEventListener('click', this.addVideoFn)
+    }
+    
+    addVideoFn = () => {
+        document.body.insertAdjacentHTML('beforeend', `
+            <modal- class="small">
+                <add-video></add-video>
+            </modal->
+        `)
     }
 })
+

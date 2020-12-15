@@ -4,35 +4,37 @@ customElements.define('modal-', class extends WebKey {
     }
 
     contentLoaded() {
-        const {
-            addElms,
-            query,
-            setEventListener,
-            closeModal,
-        } = this
+        const sr = this.shadowRoot
 
-        addElms({
-            exitBtn: query('.exit-btn'),
-            wrapper: query('.wrapper'),
-        })
+        const exitBtn = sr.querySelector('.exit-btn')
+        const wrapper = sr.querySelector('.wrapper')
 
-        const {
+        Object.assign(this.elms, {
             exitBtn,
             wrapper,
-        } = this.elms
-        
+        })
+
         document.documentElement.style.overflow = 'hidden'
 
-        setEventListener(wrapper, 'click', (event) => {
-            if (wrapper === event.target)
-                closeModal()
-        })
-
-        setEventListener(exitBtn, 'click', (event) => {
-            closeModal()
-        })
-
+        wrapper.addEventListener('click', this.wrapperFn)
+        exitBtn.addEventListener('click', this.exitBtnFn)
         document.addEventListener('keydown', this.escapeModal)
+    }
+    
+    wrapperFn = (event) => {
+        const { wrapper } = this.elms
+        if (wrapper === event.target)
+            this.closeModal()
+    }
+    
+    exitBtnFn = (event) => {
+        this.closeModal()
+    }
+    
+    escapeModal = (event) => {
+        const modal = document.querySelector('modal-:last-of-type')
+        if (event.code === 'Escape' && modal)
+        this.closeModal(modal)
     }
     
     closeModal = (modal = this) => {
@@ -42,11 +44,5 @@ customElements.define('modal-', class extends WebKey {
             if (!document.querySelector('modal-'))
                 document.documentElement.style.overflow = ''
         }
-    }
-
-    escapeModal = (e) => {
-        const modal = document.querySelector('modal-:last-of-type')
-        if (e.code === 'Escape' && modal)
-            this.closeModal(modal)
     }
 })

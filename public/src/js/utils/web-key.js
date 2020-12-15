@@ -43,8 +43,6 @@ export default (() => {
             super()
             this.defaultProps(...props)
             this.attachShadow({ mode: 'open' })
-            this.query = this.shadowRoot.querySelector.bind(this.shadowRoot)
-            this.queryAll = this.shadowRoot.querySelectorAll.bind(this.shadowRoot)
             this.addEventListener('content-loaded', this.contentLoaded)
             init(this)
         }
@@ -61,23 +59,21 @@ export default (() => {
             }
         })
 
-        addElms = (obj) => {
-            Object.assign(this.elms, obj)
-        }
-
         defaultProps = (...props) => {
+            const isFunction = fn => typeof fn === 'function'
             props.forEach(prop => {
                 Object.defineProperty(this, prop, {
                     get: () => {
-                        const name = `get_${prop}`
-                        if (typeof this[name] === 'function')
-                            return this[name](this.data[prop])
-                        return this.data[prop]
+                        const value = this.data[prop]
+                        const getFn = this[`get_${prop}`]
+                        if (isFunction(getFn))
+                            return getFn(value)
+                        return value
                     },
                     set: (value) => {
-                        const name = `set_${prop}`
-                        if (typeof this[name] === 'function')
-                            this.data[prop] = this[name](value)
+                        const setFn = this[`set_${prop}`]
+                        if (isFunction(setFn))
+                            this.data[prop] = setFn(value)
                         else
                             this.data[prop] = value
                         return true
@@ -137,36 +133,7 @@ export default (() => {
 
         renderProp = (prop) => {
             if (this.isContentLoaded && typeof this[this.getRenderName(prop)] === 'function')
-                this[this.getRenderName(prop)]()
-        }
-
-        getRenderName = (prop) => {
-            return `render_${prop}`
-        }
-
-        isFontFamilySet = (node) => {
-            return node.computedStyleMap().get('font-family').toString() !== this.initialFont(node)
-        }
-
-        initialFont = (node) => {
-            const template = document.createElement('template')
-            template.style.cssText = 'font-family: initial !important'
-            node.append(template)
-            const initial = template.computedStyleMap().get('font-family').toString()
-            template.remove()
-            return initial
-        }
-
-        setEventListener = (target, type, listener) => {
-            target.addEventListener(type, listener)
-            this._eventListeners.push({ target, type, listener })
-        }
-
-        disconnectEventListeners = () => {
-            this._eventListeners.forEach(obj => {
-                const { target, type, listener } = obj
-                target.removeEventListener(type, listener)
-            })
+                this[`render_${prop}`]()
         }
     }
 
