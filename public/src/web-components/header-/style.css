@@ -98,3 +98,7 @@ nav a {
 		border-radius: 9000px;
 	}
 }
+
+[signed_out] .signed-in {
+	display: none!important;
+}

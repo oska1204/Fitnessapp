@@ -91,11 +91,6 @@ export default (() => {
             }
         }
 
-        disconnectedCallback() {
-            this.disconnectEventListeners()
-            this.contentRemoved()
-        }
-
         static get observedAttributes() {
             return []
         }
@@ -105,9 +100,6 @@ export default (() => {
         }
 
         contentLoaded() {
-        }
-
-        contentRemoved() {
         }
 
         updateFrontEnd = () => {
@@ -132,8 +124,9 @@ export default (() => {
         }
 
         renderProp = (prop) => {
-            if (this.isContentLoaded && typeof this[this.getRenderName(prop)] === 'function')
-                this[`render_${prop}`]()
+            const fn = this[`render_${prop}`]
+            if (this.isContentLoaded && typeof fn === 'function')
+                fn()
         }
     }
 

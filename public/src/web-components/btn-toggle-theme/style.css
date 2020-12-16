@@ -1,0 +1,5 @@
+a {
+	user-select: none;
+	-webkit-text-stroke: 1px;
+	font-size: 1.5em;
+}
