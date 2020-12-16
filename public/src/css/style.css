@@ -506,16 +506,21 @@ main {
     border: 2px solid rgba(255, 0, 0, 0.5);
 }
 
-.form > .form-wrapper {
+.form {
     display: flex;
     height: 100%;
+}
+
+.form-wrapper {
     margin: auto;
+    padding: var(--spacing-xxl);
+    background: var(--secondary-bg-color);
 }
 
 form {
     display: flex;
     flex-direction: column;
-    padding: var(--spacing-xxl);
+    padding-top: var(--spacing-m);
     width: 100%;
     max-width: 500px;
 }
